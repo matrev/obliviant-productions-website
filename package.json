@@ -2,7 +2,7 @@
   "name": "brothersistershow",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://brothersistershow.github.io/brothersistershow.github.io",
+  "homepage": "https://brothersistershow.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
