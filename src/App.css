@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+:root {
+  --bg-dark: #20913c;
+  --bg-light: #DAD0ED;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+}
+
+.header-style {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  width: "100%";
+  height: "70px";
+}
