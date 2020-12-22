@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Parser from 'rss-parser';
 
 export default function Home () {
-    const [latestEpisodes, setLatestEpisodes] = useState({});
+    const [latestEpisodes, setLatestEpisodes] = useState([]);
     async function getEpisodes() {
         let parser = new Parser();
         const feed = await parser.parseURL('https://feeds.simplecast.com/kASbzC1o');
-        setLatestEpisodes({ feed });
+        setLatestEpisodes(feed.items);
         console.log("feed: ", feed);
     }
 
@@ -16,7 +16,7 @@ export default function Home () {
 
     return (
         <div>
-            Home
+            {/* {latestEpisodes} */}
         </div>
     )
 }

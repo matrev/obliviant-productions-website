@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Episodes from './pages/Episodes';
 import { Flex } from 'rebass';
-import { Nav, NavbarBrand } from 'reactstrap';
+import { Nav, NavbarBrand, NavLink } from 'reactstrap';
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
 				<NavbarBrand href={"/"} className="mr-auto" >
 					<img src={require("./assets/logo.PNG")} style={{width: 50}} alt="Navigation bar brand logo"/>
 				</NavbarBrand>
-				<Link variant="nav" to="/about">About</Link>
-				<Link variant="nav" to="/episodes">Episodes</Link>
+				<NavLink variant="nav" href="/about">About</NavLink>
+				<NavLink variant="nav" href="/episodes">Episodes</NavLink>
 			</Flex>
 
       	</Nav>
