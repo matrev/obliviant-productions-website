@@ -21,8 +21,8 @@ function App() {
 				<NavbarBrand href={"/"} className="mr-auto" >
 					<img src={require("./assets/logo.PNG")} style={{width: 50}} alt="Navigation bar brand logo"/>
 				</NavbarBrand>
-				<NavLink variant="nav" href="/about">About</NavLink>
-				<NavLink variant="nav" href="/episodes">Episodes</NavLink>
+				<NavLink style={{ color: "white" }} variant="nav" href="/about">About</NavLink>
+				<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
 			</Flex>
 
       	</Nav>
