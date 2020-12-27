@@ -18,7 +18,9 @@ export default function Home () {
 
     return (
         <div>
-            <EpisodeCollection episodes={latestEpisodes} />
+            
+            Latest Episodes
+            <EpisodeCollection episodes={latestEpisodes.slice(0, 5)} />
         </div>
     )
 }
