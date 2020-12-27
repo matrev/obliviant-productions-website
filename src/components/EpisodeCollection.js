@@ -8,7 +8,8 @@ export default function EpisodeCollection (props) {
     return (
         <Box
             px={3}
-            // width={[ 1, 1, 1/2 ]}
+            margin={[ 0, 1, 2 ]}
+            px={[1,100,200]}
             sx={{
                 display: 'grid',
                 gridGap: 40,

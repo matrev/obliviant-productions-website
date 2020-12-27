@@ -17,7 +17,7 @@ export default function EpisodeCard (props) {
                 <Link target='_blank' href={props.episode.link} variant='nav' >
                     <Heading>{props.episode.title}</Heading>
                 </Link>
-                <br />
+                <br/>
                 {props.episode.content.length >= 100 ? 
                     props.episode.content.substr(0,100) + '...' 
                     : props.episode.content}

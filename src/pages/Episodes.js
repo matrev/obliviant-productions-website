@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Parser from 'rss-parser';
 import EpisodeCollection from '../components/EpisodeCollection';
 import { Label, Input } from '@rebass/forms';
+import { Box, Flex } from 'rebass';
 
 export default function Episodes () {
 
@@ -23,13 +24,21 @@ export default function Episodes () {
     // console.log(searchInput);
     return (
         <div>
-            <Label htmlFor='search'>Search For an Episode</Label>
-            <Input
-                id='search'
-                name='search'
-                value={searchInput}
-                onChange={(e) => {setSearchInput(e.target.value)}}
-            ></Input>
+            <center>
+            <Box
+                sx={{ 
+                margin: [ 3, 10, 25],
+                width: [ 200 , null, 500]
+            }}>
+                <Label htmlFor='search'>Search For an Episode</Label>
+                <Input
+                    id='search'
+                    name='search'
+                    value={searchInput}
+                    onChange={(e) => {setSearchInput(e.target.value)}}
+                ></Input>
+            </Box>
+            </center>
             <EpisodeCollection episodes={latestEpisodes} />
         </div>
     )
