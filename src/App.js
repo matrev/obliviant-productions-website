@@ -28,11 +28,9 @@ function App() {
 					<Nav className="header-style">
 						<Flex
 							px={2}
-							color='white'
-							// bg='black'
 							alignItems='center'>
 							<NavbarBrand href="/" className="mr-auto" >
-								<img src={require("./assets/logo.PNG")} style={{width: 50}} alt="Navigation bar brand logo"/>
+								<img src={require("./assets/logo.png")} style={{width: 256}} alt="Navigation bar brand logo"/>
 							</NavbarBrand>
 							<NavLink style={{ color: "white" }} variant="nav" href="/about">About</NavLink>
 							<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
@@ -43,7 +41,7 @@ function App() {
 				{isTabletOrMobileDevice && 
 					<Navbar className="header-style" dark>
 						<NavbarBrand href="/" className="mr-auto">
-							<img src={require("./assets/logo.PNG")} style={{width: 50}} alt="Navigation bar brand logo"/>
+							<img src={require("./assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
 						</NavbarBrand>
 						<NavbarToggler onClick={toggleNavbar} className="mr-2" />
 						<Collapse isOpen={!collapsed} navbar>
@@ -58,10 +56,12 @@ function App() {
 						</Collapse>
 					</Navbar>
 				}
-
-				<Route exact path="/" component={Home} />
-				<Route path="/about" component={About} />
-				<Route path="/episodes" component={Episodes} />
+				<br/>
+				<div className='back'>
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/episodes" component={Episodes} />
+				</div>
 			</BrowserRouter>
 		</div>
   );

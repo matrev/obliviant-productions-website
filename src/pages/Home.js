@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Text } from 'rebass';
 import Parser from 'rss-parser';
 import EpisodeCollection from '../components/EpisodeCollection';
-import Episodes from './Episodes';
 
 export default function Home () {
     const [latestEpisodes, setLatestEpisodes] = useState([]);
@@ -18,9 +18,12 @@ export default function Home () {
 
     return (
         <div>
-            
-            Latest Episodes
-            <EpisodeCollection episodes={latestEpisodes.slice(0, 5)} />
-        </div>
+            <Text>
+            Howdy! We're the Brother Sister Show, a podcast where two siblings attempt to keep in touch by talking about movies.
+            </Text>
+            <Text fontWeight='bold' color='primary'>Latest Episodes</Text>
+            <br/>
+            <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0, 5)} />
+        </div>        
     )
 }

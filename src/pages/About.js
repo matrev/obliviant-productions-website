@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Text } from 'rebass';
 
 export default function About () {
     return (
         <div>
-            This is About
+            <Text>
+                This is About.
+            </Text>
         </div>
     )
 }

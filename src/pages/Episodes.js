@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Parser from 'rss-parser';
 import EpisodeCollection from '../components/EpisodeCollection';
 import { Label, Input } from '@rebass/forms';
-import { Box, Flex } from 'rebass';
+import { Box } from 'rebass';
 
 export default function Episodes () {
 
@@ -20,6 +20,7 @@ export default function Episodes () {
 
     useEffect(() => {
         getEpisodes();
+        // eslint-disable-next-line
     }, [searchInput]);
     // console.log(searchInput);
     return (
