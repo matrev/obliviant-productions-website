@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Episodes from './pages/Episodes';
-import { Flex } from 'rebass';
+import { Box, Flex } from 'rebass';
 import { useMediaQuery } from 'react-responsive';
 import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem} from 'reactstrap';
 
@@ -25,17 +25,19 @@ function App() {
 		<div className="App">
 			<BrowserRouter basename={"/"}>
 				{isDesktopOrLaptop && 
-					<Nav className="header-style">
-						<Flex
-							px={2}
-							alignItems='center'>
-							<NavbarBrand href="/" className="mr-auto" >
+					<Flex className='header-style' alignItems='center'>
+						<Box width={1/3} px={2} >
+							<NavLink style={{ color: "white", fontSize: '36px', width: '5px' }} variant="nav" href="/about">About</NavLink>
+						</Box>
+						<Box width={1/3} px={2}>
+							<NavbarBrand href="/" className="mr-auto">
 								<img src={require("./assets/logo.png")} style={{width: 256}} alt="Navigation bar brand logo"/>
 							</NavbarBrand>
-							<NavLink style={{ color: "white" }} variant="nav" href="/about">About</NavLink>
-							<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
-						</Flex>
-					</Nav>
+						</Box>
+						<Box width={1/3} px={2}>
+							<NavLink style={{ color: "white", fontSize: '36px', width: '5px' }} variant="nav" href="/episodes">Episodes</NavLink> 
+						</Box>
+					</Flex>
 				}
 
 				{isTabletOrMobileDevice && 
