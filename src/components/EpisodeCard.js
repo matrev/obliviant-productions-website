@@ -13,7 +13,6 @@ export default function EpisodeCard (props) {
                 {props.episode.content.length >= 100 ? 
                     props.episode.content.substr(0,100) + '...' 
                     : props.episode.content}
-                    <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src={props.episode.link}></iframe>
             </Card>
     )
 }

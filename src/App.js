@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Episodes from './pages/Episodes';
-import { Box, Flex, Link } from 'rebass';
+import { Box, Flex, Link, Text } from 'rebass';
 import { useMediaQuery } from 'react-responsive';
 import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem} from 'reactstrap';
 
@@ -40,8 +40,12 @@ function App() {
 						
 						<Box width={1/4} px={2}>
 							<Link href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank'>
-								<img src={require("./assets/spotifybadge.png")} style={{width: 256}} alt="Spotify Badge" />
+								<img src={require("./assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 							</Link>
+							<Link href='https://twitter.com/brosisshow' target='_blank'>
+								<img src={require("./assets/twitterIcon.png")} style={{width: 64}} alt="Spotify Badge" />
+							</Link>
+							<Text>@brosisshow</Text>
 						</Box>
 					</Flex>
 				}

@@ -23,7 +23,8 @@ export default function Home () {
             </Text>
             <Text fontWeight='bold' color='primary'>Latest Episodes</Text>
             <br/>
-            <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0,1)} />
+            <iframe height="200px" width="75%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/3f0d92ea-3878-437f-9077-6edcbc6e6002?dark=true"></iframe>
+            {/* <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0,1)} /> */}
         </div>        
     )
 }
