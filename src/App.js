@@ -45,7 +45,6 @@ function App() {
 							<Link href='https://twitter.com/brosisshow' target='_blank'>
 								<img src={require("./assets/twitterIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 							</Link>
-							<Text>@brosisshow</Text>
 						</Box>
 					</Flex>
 				}
