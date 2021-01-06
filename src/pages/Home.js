@@ -23,7 +23,7 @@ export default function Home () {
             </Text>
             <Text fontWeight='bold' color='primary'>Latest Episodes</Text>
             <br/>
-            <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0, 5)} />
+            <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0,1)} />
         </div>        
     )
 }
