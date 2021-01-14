@@ -23,32 +23,32 @@ function App() {
 				{(isDesktopOrLaptop && !isTabletOrMobile) &&
 					<Container className='header-style' fluid>
 						<Row>
-							<Col xs='3' style={{ display: 'flex', alignItems: 'center'}} >
+							<Col sm={{ size: 'auto', offset: 3 }} style={{ display: 'center'}}>
 								<NavLink style={{ color: "white", fontSize: '36px' }} variant="nav" href="/about">About</NavLink>
 							</Col>
 
-							<Col xs='auto'>
+							<Col style={{ display: 'center'}}>
 								<NavbarBrand href="/" className="logo">
 									<img src={require("./assets/logo.png")} style={{width: 256}} alt="Navigation bar brand logo"/>
 								</NavbarBrand>	
 							</Col>
 
-							<Col>
-							<NavLink style={{ color: "white", fontSize: '36px'}} variant="nav" href="/episodes">Episodes</NavLink> 
+							<Col style={{ display: 'center'}}>
+								<NavLink style={{ color: "white", fontSize: '36px'}} variant="nav" href="/episodes">Episodes</NavLink> 
 							</Col>
-							<Col xs='3'>
+							{/* <Col xs='3' style={{ display: 'flex', alignItems: 'center' }}>
 								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{marginRight: '25px'}}>
 									<img src={require("./assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://twitter.com/brosisshow' target='_blank' style={{marginRight: '25px'}}>
+								<a href='https://twitter.com/brosisshow' target='_blank' style={{marginRight: '20px'}}>
 									<img src={require("./assets/twitterIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 								</a>
 
 								<a href='https://instagram.com/brothersistershow' target='_blank'>
-									<img src={require("./assets/instaIcon.png")} style={{width: 75}} alt="Spotify Badge" />
+									<img src={require("./assets/instaIcon.png")} style={{width: 80}} alt="Spotify Badge" />
 								</a>
-							</Col>
+							</Col> */}
 						</Row>
 					</Container>
 				}
