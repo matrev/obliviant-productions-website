@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Route, BrowserRouter, Link } from 'react-router-dom';
+import { Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Episodes from './pages/Episodes';
+import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
 import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem} from 'reactstrap';
 import { Stack, StackItem } from '@fluentui/react';
@@ -24,8 +25,8 @@ function App() {
 					<Stack className='header-style' horizontal horizontalAlign='center' tokens={{childrenGap: 0}} >
 						
 						<Stack horizontal  verticalAlign='center' horizontalAlign='end'>
+						<NavLink style={{ color: 'white', fontSize: '42px'}} href='/'>Home</NavLink>
 							<NavLink style={{ color: "white", fontSize: '42px' }} variant="nav" href="/about">About</NavLink>
-							<NavLink style={{ color: "white", fontSize: '42px'}} variant="nav" href="/episodes">Episodes</NavLink> 
 						</Stack>
 
 						<StackItem styles={{ root: { padding: '0px 0px 0px 0px'}}}>
@@ -34,7 +35,11 @@ function App() {
 							</NavbarBrand>	
 						</StackItem>	
 
-						<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 10}}>
+						<Stack horizontal verticalAlign='center' horizontalAlign='start'>
+							<NavLink style={{ color: "white", fontSize: '42px'}} variant="nav" href="/episodes">Episodes</NavLink>
+							<NavLink style={{ color: 'white', fontSize: '42px'}} href='/contact'>Contact</NavLink>
+						</Stack>
+						{/* <Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 10}}>
 							<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{paddingRight: '5px'}}>
 								<img src={require("./assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 							</a>
@@ -50,7 +55,7 @@ function App() {
 							<a href='https://discord.gg/QY2BMPeE' target='_blank'>
 								<img src={require("./assets/discordIcon")} style={{width: 80}} alt="Spotify Badge" />
 							</a>
-						</Stack>
+						</Stack> */}
 					</Stack>
 				}
 				{(isTabletOrMobile) &&
@@ -129,6 +134,7 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route path="/about" component={About} />
 					<Route path="/episodes" component={Episodes} />
+					<Route path="/contact" component={Contact} />
 				</div>
 			</BrowserRouter>
 		</div>
