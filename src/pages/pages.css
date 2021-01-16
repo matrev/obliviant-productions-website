@@ -1,0 +1,32 @@
+:root {
+    --text-blue: #1db3cb;
+    --text-red: #e05a4e;
+    --text-yellow: #ffb541;
+}
+
+.about-header {
+    color: var(--text-blue);
+    font-size: calc(40px + 2vmin);
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-left: calc(15vmin);
+}
+
+.episodes-header {
+    color: var(--text-blue);
+    font-size: calc(40px + 2vmin);
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-left: calc(15vmin);
+}
+
+.contact-header {
+    color: var(--text-blue);
+    font-size: calc(40px + 2vmin);
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-left: calc(15vmin);
+}

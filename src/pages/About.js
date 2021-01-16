@@ -1,12 +1,14 @@
 import React from 'react';
-import { Text } from 'rebass';
+import { Stack } from '@fluentui/react';
+import './pages.css';
 
 export default function About () {
     return (
-        <div>
-            <Text>
-                This is About.
-            </Text>
-        </div>
+        <Stack>
+            <Stack className='about-header' horizontalAlign='start'>
+                About
+            </Stack>
+        </Stack>
+
     )
 }

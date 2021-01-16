@@ -7,7 +7,7 @@ import Episodes from './pages/Episodes';
 import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
 import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem} from 'reactstrap';
-import { Stack, StackItem } from '@fluentui/react';
+import { Stack } from '@fluentui/react';
 
 function App() {
 
@@ -24,20 +24,20 @@ function App() {
 				{(isDesktopOrLaptop && !isTabletOrMobile) &&
 					<Stack className='header-style' horizontal horizontalAlign='center' tokens={{childrenGap: 0}} >
 						
-						<Stack horizontal  verticalAlign='center' horizontalAlign='end'>
-						<NavLink style={{ color: 'white', fontSize: '42px'}} href='/'>Home</NavLink>
-							<NavLink style={{ color: "white", fontSize: '42px' }} variant="nav" href="/about">About</NavLink>
+						<Stack horizontal verticalAlign='center' horizontalAlign='end'>
+							<NavLink className='nav-link'  href='/'>Home</NavLink>
+							<NavLink className='nav-link' href="/about">About</NavLink>
 						</Stack>
 
-						<StackItem styles={{ root: { padding: '0px 0px 0px 0px'}}}>
-							<NavbarBrand href="/" className="logo">
+						<Stack className='logo' horizontalAlign='center' verticalAlign='center'>
+							<a href="/">
 								<img src={require("./assets/logo.png")} style={{width: 256}} alt="Navigation bar brand logo"/>
-							</NavbarBrand>	
-						</StackItem>	
+							</a>	
+						</Stack>	
 
 						<Stack horizontal verticalAlign='center' horizontalAlign='start'>
-							<NavLink style={{ color: "white", fontSize: '42px'}} variant="nav" href="/episodes">Episodes</NavLink>
-							<NavLink style={{ color: 'white', fontSize: '42px'}} href='/contact'>Contact</NavLink>
+							<NavLink className='nav-link' href="/episodes">Episodes</NavLink>
+							<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 						</Stack>
 						{/* <Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 10}}>
 							<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{paddingRight: '5px'}}>
@@ -74,19 +74,19 @@ function App() {
 								<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
 							</NavItem>
 							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
-								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{paddingRight: '5px'}}>
+								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
 									<img src={require("./assets/spotifyIcon.png")} style={{width: 32}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://twitter.com/brosisshow' target='_blank'>
+								<a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
 									<img src={require("./assets/twitterIcon.png")} style={{width: 32}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://instagram.com/brothersistershow' target='_blank'>
+								<a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
 									<img src={require("./assets/instaIcon.png")} style={{width: 40}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://discord.gg/QY2BMPeE' target='_blank'>
+								<a href='https://discord.gg/QY2BMPeE' target='_blank' rel="noopener noreferrer">
 									<img src={require("./assets/discordIcon")} style={{width: 40}} alt="Spotify Badge" />
 								</a>
 							</Stack>
@@ -109,19 +109,19 @@ function App() {
 								<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
 							</NavItem>
 							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
-								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{paddingRight: '5px'}}>
+								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
 									<img src={require("./assets/spotifyIcon.png")} style={{width: 32}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://twitter.com/brosisshow' target='_blank'>
+								<a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
 									<img src={require("./assets/twitterIcon.png")} style={{width: 32}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://instagram.com/brothersistershow' target='_blank'>
+								<a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
 									<img src={require("./assets/instaIcon.png")} style={{width: 40}} alt="Spotify Badge" />
 								</a>
 
-								<a href='https://discord.gg/QY2BMPeE' target='_blank'>
+								<a href='https://discord.gg/QY2BMPeE' target='_blank'rel="noopener noreferrer" >
 									<img src={require("./assets/discordIcon")} style={{width: 40}} alt="Spotify Badge" />
 								</a>
 							</Stack>
@@ -129,13 +129,11 @@ function App() {
 						</Collapse>
 					</Navbar>
 				}
-				<br/>
-				<div className='back'>
-					<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/episodes" component={Episodes} />
-					<Route path="/contact" component={Contact} />
-				</div>
+				<hr class='nav-bottom-border' />
+				<Route exact path="/" component={Home} />
+				<Route path="/about" component={About} />
+				<Route path="/episodes" component={Episodes} />
+				<Route path="/contact" component={Contact} />
 			</BrowserRouter>
 		</div>
   );

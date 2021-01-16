@@ -1,10 +1,12 @@
+html {
+  background-color: #000000;
+}
+
 body {
   font-family: neue-kabel,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
-/* @import url("https://use.typekit.net/fuz4kyv.css"); */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
