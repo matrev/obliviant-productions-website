@@ -1,9 +1,12 @@
 import React from 'react';
+import { Stack } from '@fluentui/react';
 
 export default function Contact () {
     return (
-        <div>
-            This is contact.
-        </div>
+        <Stack>
+            <Stack className='contact-header' horizontalAlign='start'>
+                Contact
+            </Stack>
+        </Stack>
     )
 }

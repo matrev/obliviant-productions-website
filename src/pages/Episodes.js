@@ -3,6 +3,8 @@ import Parser from 'rss-parser';
 import EpisodeCollection from '../components/EpisodeCollection';
 import { Label, Input } from '@rebass/forms';
 import { Box } from 'rebass';
+import { Stack } from '@fluentui/react';
+import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 
 export default function Episodes () {
 
@@ -16,6 +18,7 @@ export default function Episodes () {
             return episode.title.toLowerCase().includes(searchInput.toLowerCase());
         }));
         console.log("feed: ", feed.items);
+        // getEpisodesFromSimplecast();
     }
 
     useEffect(() => {
@@ -25,6 +28,9 @@ export default function Episodes () {
     // console.log(searchInput);
     return (
         <div>
+            <Stack className='episodes-header' horizontalAlign='start'>
+                Episodes
+            </Stack>
             <center>
             <Box
                 sx={{ 

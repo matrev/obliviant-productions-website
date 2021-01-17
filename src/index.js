@@ -8,11 +8,11 @@ import theme from '@rebass/preset';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+    </ThemeProvider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

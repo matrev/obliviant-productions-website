@@ -2,6 +2,24 @@
     --text-blue: #1db3cb;
     --text-red: #e05a4e;
     --text-yellow: #ffb541;
+    --text-white: #ffffff;
+}
+
+.home-text {
+    color: var(--text-white);
+    font-family: acumin-pro-condensed, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 750px;
+    font-size: xx-large;
+}
+
+.home-header {
+    color: var(--text-white);
+    font-size: calc(40px + 2vmin);
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .about-header {
@@ -14,7 +32,7 @@
 }
 
 .episodes-header {
-    color: var(--text-blue);
+    color: var(--text-red);
     font-size: calc(40px + 2vmin);
     font-family: neue-kabel, sans-serif;
     font-weight: 800;
@@ -23,7 +41,7 @@
 }
 
 .contact-header {
-    color: var(--text-blue);
+    color: var(--text-yellow);
     font-size: calc(40px + 2vmin);
     font-family: neue-kabel, sans-serif;
     font-weight: 800;
