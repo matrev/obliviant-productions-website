@@ -17,7 +17,7 @@ export default function Home () {
     }, []);
 
     return (
-        <Stack horizontalAlign='center' style={{ paddingTop: 10}} tokens={{childrenGap: 100}}>
+        <Stack horizontalAlign='center' style={{ paddingTop: 10}} tokens={{childrenGap: 50}}>
             <StackItem className='home-text' horizontalAlign='center'>
 
                 Howdy! We're the Brother Sister Show, a podcast where two siblings keep in touch by talking about movies.

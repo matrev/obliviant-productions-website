@@ -51,7 +51,16 @@ function App() {
 						<Collapse isOpen={!collapsed} navbar>
 						<Nav navbar>
 							<NavItem>
-								<NavLink style={{ color: "white" }} variant="nav" href="/about">About</NavLink>
+								<NavLink className='nav-link' href='/'>Home</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink className='nav-link' href="/about">About</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink className='nav-link' href='/episodes'>Episodes</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
 							<NavItem>
 								<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
@@ -86,10 +95,16 @@ function App() {
 						<Collapse isOpen={!collapsed} navbar>
 						<Nav navbar>
 							<NavItem>
-								<NavLink style={{ color: "white" }} variant="nav" href="/about">About</NavLink>
+								<NavLink className='nav-link'  href='/'>Home</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
+								<NavLink className='nav-link' href="/about">About</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink className='nav-link' href="/episodes">Episodes</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
 							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
 								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
