@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Parser from 'rss-parser';
 import { Stack, StackItem } from '@fluentui/react';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home () {
     // eslint-disable-next-line
     const [latestEpisodes, setLatestEpisodes] = useState([]);
+
+    const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' }); 
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' })
+
     async function getEpisodes() {
         let parser = new Parser();
         const feed = await parser.parseURL('https://feeds.simplecast.com/kASbzC1o');
@@ -17,20 +22,12 @@ export default function Home () {
     }, []);
 
     return (
-        <Stack horizontalAlign='center' style={{ paddingTop: 10}} tokens={{childrenGap: 50}}>
-            <StackItem className='home-text' horizontalAlign='center'>
-
-                Howdy! We're the Brother Sister Show, a podcast where two siblings keep in touch by talking about movies.
-            </StackItem>
-            {/* <EpisodeCollection alignItems='center' episodes={latestEpisodes.slice(0,1)} /> */}
-
-            <Stack horizontal horizontalAlign='space-between'>
-
-                <StackItem className='home-header' horizontalAlign='center'>
+            <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 10}}>
+                <Stack className='home-header' horizontalAlign='center'>
                     Latest Episode
                     <iframe title='latest-episode' height="200px" width="75%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/417cffe7-6511-4d45-83a2-f3ac7d14208c?dark=true"></iframe>
-                </StackItem>
-                <StackItem className='home-header' horizontalAlign='center'>
+                </Stack>
+                <Stack className='home-header' horizontalAlign='center'>
                     Follow Us
                     <Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 10}}>
 							<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' style={{paddingRight: '5px'}}>
@@ -49,8 +46,8 @@ export default function Home () {
 								<img src={require("../assets/discordIcon")} style={{width: 80}} alt="Spotify Badge" />
 							</a>
 						</Stack>
-                </StackItem>
+                </Stack>
             </Stack>
-        </Stack>        
+        // </Stack>        
     )
 }

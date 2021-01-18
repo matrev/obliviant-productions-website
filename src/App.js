@@ -49,7 +49,7 @@ function App() {
 						</NavbarBrand>
 						<NavbarToggler onClick={toggleNavbar} className="mr-2" />
 						<Collapse isOpen={!collapsed} navbar>
-						<Nav navbar>
+						<Nav navbar style={{ alignItems: 'center' }}>
 							<NavItem>
 								<NavLink className='nav-link' href='/'>Home</NavLink>
 							</NavItem>
@@ -61,9 +61,6 @@ function App() {
 							</NavItem>
 							<NavItem>
 								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink style={{ color: "white" }} variant="nav" href="/episodes">Episodes</NavLink>
 							</NavItem>
 							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
 								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
@@ -93,7 +90,7 @@ function App() {
 						</NavbarBrand>
 						<NavbarToggler onClick={toggleNavbar} className="mr-2" />
 						<Collapse isOpen={!collapsed} navbar>
-						<Nav navbar>
+						<Nav navbar style={{ alignItems: 'center' }}>
 							<NavItem>
 								<NavLink className='nav-link'  href='/'>Home</NavLink>
 							</NavItem>
