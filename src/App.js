@@ -6,7 +6,7 @@ import About from './pages/About';
 import Episodes from './pages/Episodes';
 import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
-import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem} from 'reactstrap';
+import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu} from 'reactstrap';
 import { Stack } from '@fluentui/react';
 
 function App() {
@@ -36,7 +36,28 @@ function App() {
 						</Stack>	
 
 						<Stack horizontal verticalAlign='center' horizontalAlign='start'>
-							<NavLink className='nav-link' href="/episodes">Episodes</NavLink>
+							<UncontrolledDropdown inNavbar>
+								<DropdownToggle className='nav-link' nav caret>
+									Episodes
+								</DropdownToggle>
+								<DropdownMenu center>
+									<NavLink className='nav-link' href='/episodes/all'>
+										<DropdownItem>
+											All
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/anthony'>
+										<DropdownItem>
+											Anthony's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/livia'>
+										<DropdownItem>
+											Livia's Picks
+										</DropdownItem>
+									</NavLink>
+								</DropdownMenu>
+							</UncontrolledDropdown>
 							<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 						</Stack>
 					</Stack>
@@ -127,7 +148,9 @@ function App() {
 				<hr className='nav-bottom-border' />
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
-				<Route path="/episodes" component={Episodes} />
+				<Route path="/episodes/all" render={() => <Episodes />} />
+				<Route path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
+				<Route path="/episodes/livia" render={() => <Episodes isLivia />} />
 				<Route path="/contact" component={Contact} />
 			</BrowserRouter>
 		</div>

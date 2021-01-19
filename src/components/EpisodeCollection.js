@@ -15,7 +15,7 @@ export default function EpisodeCollection (props) {
             }}>
             {props.episodes.map((episode, i) => {
                 return (<center>
-                    <EpisodeCard key={i} episode={episode}/>
+                    <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src={`https://player.simplecast.com/${episode.id}?dark=true`}></iframe>
                     </center>)
             })}
         </Box>

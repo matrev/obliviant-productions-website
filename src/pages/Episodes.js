@@ -5,7 +5,7 @@ import { Box } from 'rebass';
 import { Stack } from '@fluentui/react';
 import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 
-export default function Episodes () {
+export default function Episodes (props) {
 
     const [episodes, setEpisodes] = useState([]);
     const [searchInput, setSearchInput] = useState('');
@@ -16,13 +16,17 @@ export default function Episodes () {
         setEpisodes(simplecastOBJ.collection.filter((episode) => {
             return episode.title.toLowerCase().includes(searchInput.toLowerCase());
         }));
+        if(props.isAnthony) {
+            console.log('this should be only anthony');
+            setEpisodes(episodes.filter((episode, i) => i % 2 == 1));
+        }
     }
     
     useEffect(() => {
         getEpisodes();
         // eslint-disable-next-line
     }, [searchInput]);
-    // console.log(searchInput);
+    console.log(episodes);
 
     return (
         <div>
