@@ -1,25 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Parser from 'rss-parser';
-import { Stack, StackItem } from '@fluentui/react';
-import { useMediaQuery } from 'react-responsive';
+import React from 'react';
+import { Stack} from '@fluentui/react';
 
 export default function Home () {
-    // eslint-disable-next-line
-    const [latestEpisodes, setLatestEpisodes] = useState([]);
-
-    const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' }); 
-	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' })
-
-    async function getEpisodes() {
-        let parser = new Parser();
-        const feed = await parser.parseURL('https://feeds.simplecast.com/kASbzC1o');
-        setLatestEpisodes(feed.items);
-        console.log("feed: ", feed.items);
-    }
-
-    useEffect(() => {
-        getEpisodes();
-    }, []);
 
     return (
             <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 10}}>
@@ -47,7 +29,6 @@ export default function Home () {
 							</a>
 						</Stack>
                 </Stack>
-            </Stack>
-        // </Stack>        
+            </Stack>    
     )
 }

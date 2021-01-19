@@ -40,7 +40,7 @@ function App() {
 								<DropdownToggle className='nav-link' nav caret>
 									Episodes
 								</DropdownToggle>
-								<DropdownMenu center>
+								<DropdownMenu center="true">
 									<NavLink className='nav-link' href='/episodes/all'>
 										<DropdownItem>
 											All
@@ -54,6 +54,11 @@ function App() {
 									<NavLink className='nav-link' href='/episodes/livia'>
 										<DropdownItem>
 											Livia's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/guest'>
+										<DropdownItem>
+											Guest Appearances
 										</DropdownItem>
 									</NavLink>
 								</DropdownMenu>
@@ -151,6 +156,7 @@ function App() {
 				<Route path="/episodes/all" render={() => <Episodes />} />
 				<Route path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
 				<Route path="/episodes/livia" render={() => <Episodes isLivia />} />
+				<Route path="/episodes/guest" render={() => <Episodes isGuest />} />
 				<Route path="/contact" component={Contact} />
 			</BrowserRouter>
 		</div>

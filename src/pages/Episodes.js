@@ -8,7 +8,8 @@ import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 export default function Episodes (props) {
 
     const [episodes, setEpisodes] = useState([]);
-    const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState(props.isGuest ? 'ft.' : '');
+    
 
     async function getEpisodes() {
         const simplecastJSON = await getEpisodesFromSimplecast();
@@ -16,10 +17,6 @@ export default function Episodes (props) {
         setEpisodes(simplecastOBJ.collection.filter((episode) => {
             return episode.title.toLowerCase().includes(searchInput.toLowerCase());
         }));
-        if(props.isAnthony) {
-            console.log('this should be only anthony');
-            setEpisodes(episodes.filter((episode, i) => i % 2 == 1));
-        }
     }
     
     useEffect(() => {
