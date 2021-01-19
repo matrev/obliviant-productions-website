@@ -12,7 +12,7 @@ import { Stack } from '@fluentui/react';
 function App() {
 
 	const [collapsed, setCollapsed] = useState(true);
-  	const toggleNavbar = () => setCollapsed(!collapsed);
+	const toggleNavbar = () => setCollapsed(!collapsed);
 
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
 	const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' }); 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Parser from 'rss-parser';
 import EpisodeCollection from '../components/EpisodeCollection';
 import { Label, Input } from '@rebass/forms';
 import { Box } from 'rebass';
@@ -8,24 +7,23 @@ import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 
 export default function Episodes () {
 
-    const [latestEpisodes, setLatestEpisodes] = useState([]);
+    const [episodes, setEpisodes] = useState([]);
     const [searchInput, setSearchInput] = useState('');
+
     async function getEpisodes() {
-        let parser = new Parser();
-        const feed = await parser.parseURL('https://feeds.simplecast.com/kASbzC1o');
-        setLatestEpisodes(feed.items.filter((episode) => {
-            console.log(searchInput);
+        const simplecastJSON = await getEpisodesFromSimplecast();
+        const simplecastOBJ = JSON.parse(simplecastJSON);
+        setEpisodes(simplecastOBJ.collection.filter((episode) => {
             return episode.title.toLowerCase().includes(searchInput.toLowerCase());
         }));
-        console.log("feed: ", feed.items);
-        // getEpisodesFromSimplecast();
     }
-
+    
     useEffect(() => {
         getEpisodes();
         // eslint-disable-next-line
     }, [searchInput]);
     // console.log(searchInput);
+
     return (
         <div>
             <Stack className='episodes-header' horizontalAlign='start'>
@@ -46,7 +44,7 @@ export default function Episodes () {
                 ></Input>
             </Box>
             </center>
-            <EpisodeCollection episodes={latestEpisodes} />
+            <EpisodeCollection episodes={episodes} />
         </div>
     )
 }

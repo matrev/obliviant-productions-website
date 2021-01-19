@@ -3,7 +3,6 @@ import EpisodeCard from './EpisodeCard';
 import { Box} from 'rebass';
 
 export default function EpisodeCollection (props) {
-
     
     return (
         <Box
