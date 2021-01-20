@@ -67,7 +67,7 @@ function App() {
 						</Stack>
 					</Stack>
 				}
-				{(isTabletOrMobile) &&
+				{isTabletOrMobile &&
 				
 					<Navbar className="header-style" dark>
 						<NavbarBrand href="/" className="mr-auto">
@@ -82,9 +82,33 @@ function App() {
 							<NavItem>
 								<NavLink className='nav-link' href="/about">About</NavLink>
 							</NavItem>
-							<NavItem>
-								<NavLink className='nav-link' href='/episodes'>Episodes</NavLink>
-							</NavItem>
+							<UncontrolledDropdown inNavbar>
+								<DropdownToggle className='nav-link' nav caret>
+									Episodes
+								</DropdownToggle>
+								<DropdownMenu center="true">
+									<NavLink className='nav-link' href='/episodes/all'>
+										<DropdownItem>
+											All
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/anthony'>
+										<DropdownItem>
+											Anthony's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/livia'>
+										<DropdownItem>
+											Livia's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/guest'>
+										<DropdownItem>
+											Guest Appearances
+										</DropdownItem>
+									</NavLink>
+								</DropdownMenu>
+							</UncontrolledDropdown>
 							<NavItem>
 								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
@@ -123,9 +147,33 @@ function App() {
 							<NavItem>
 								<NavLink className='nav-link' href="/about">About</NavLink>
 							</NavItem>
-							<NavItem>
-								<NavLink className='nav-link' href="/episodes">Episodes</NavLink>
-							</NavItem>
+							<UncontrolledDropdown inNavbar>
+								<DropdownToggle className='nav-link' nav caret>
+									Episodes
+								</DropdownToggle>
+								<DropdownMenu center="true">
+									<NavLink className='nav-link' href='/episodes/all'>
+										<DropdownItem>
+											All
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/anthony'>
+										<DropdownItem>
+											Anthony's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/livia'>
+										<DropdownItem>
+											Livia's Picks
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/guest'>
+										<DropdownItem>
+											Guest Appearances
+										</DropdownItem>
+									</NavLink>
+								</DropdownMenu>
+							</UncontrolledDropdown>
 							<NavItem>
 								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
