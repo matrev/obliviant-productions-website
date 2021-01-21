@@ -11,29 +11,41 @@ export default function Episodes (props) {
     const [episodes, setEpisodes] = useState([]);
     const [searchInput, setSearchInput] = useState('');
 
-    const [episodeOffset, setEpisodeOffset] = useState(0);
+    //used for pagination, slices the episodes array into a window of 9 episodes
+    const [left, setLeft] = useState(0);
+    const [right, setRight] = useState(9);
 
     async function getEpisodes() {
-        const simplecastJSON = await getEpisodesFromSimplecast(episodeOffset);
-        const simplecastOBJ = JSON.parse(simplecastJSON);
-        setEpisodes(simplecastOBJ.collection.filter((episode) => {
-            if (props.isGuest) {
-                return episode.title.toLowerCase().includes('ft.') && episode.title.toLowerCase().includes(searchInput.toLowerCase());
-            } else if (props.isAnthony) {
-                return episode.description.toLowerCase().includes('anthony\'s pick') && episode.title.toLowerCase().includes(searchInput.toLowerCase());
-            } else if (props.isLivia) {
-                return episode.description.toLowerCase().includes('livia\'s pick') && episode.title.toLowerCase().includes(searchInput.toLowerCase());
-            }
-            return episode.title.toLowerCase().includes(searchInput.toLowerCase());
-        }));
+        
     }
     
+    //get the episodes from simplecast 
     useEffect(() => {
+
+        async function getEpisodes() {
+            const simplecastJSON = await getEpisodesFromSimplecast();
+            const simplecastOBJ = JSON.parse(simplecastJSON);
+            setEpisodes(simplecastOBJ.collection.filter((episode) => {
+                if (props.isGuest) {
+                    return episode.title.toLowerCase().includes('ft.');
+                } else if (props.isAnthony) {
+                    return episode.description.toLowerCase().includes('anthony\'s pick');
+                } else if (props.isLivia) {
+                    return (episode.description.toLowerCase().includes('livia\'s pick'));
+                }
+                return episode;
+            }));
+        }
         getEpisodes();
-        // eslint-disable-next-line
-    }, [searchInput, episodeOffset]);
-    console.log('episodeOffset: ', episodeOffset);
-    console.log('episodes.length', episodes.length)
+    }, []);
+
+    //filter episodes based on the search input
+    useEffect(() => {
+        setEpisodes(episodes.filter((episode) => {
+            return episode.title.toLowerCase().includes(searchInput.toLowerCase());
+        }));
+    }, [searchInput])
+    console.log('left: ', left, 'right: ', right);
 
     return (
         <div>
@@ -55,13 +67,15 @@ export default function Episodes (props) {
                 ></Input>
             </Box>
             </center>
-            <EpisodeCollection episodes={episodes} />
-            {!(episodeOffset <= 0) && <Button  onClick={() => {setEpisodeOffset(episodeOffset - 9)}}> Previous Page</Button>}
-            {!(episodes.find((episode) => {
-                return episode.title.toLowerCase().includes('stuber')
-                })) && 
-                <Button  onClick={() => {setEpisodeOffset(episodeOffset + 9)}}> Next Page</Button>
-                }
+            <EpisodeCollection episodes={episodes.slice(left,right)} />
+            {(left > 0) && <Button  onClick={() => { 
+                setLeft(left-9); 
+                setRight(right-9); 
+            }}>Previous Page</Button>}
+            {(right <= episodes.length) && <Button  onClick={() => { 
+                setLeft(left+9);
+                setRight(right+9);
+            }}>Next Page</Button>}
             
         </div>
     )
