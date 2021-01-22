@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { Stack} from '@fluentui/react';
+import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 
 export default function Home () {
+
+	const [latestEpisode, setLatestEpisode] = useState();
+
+	useEffect(() => {
+
+        async function getEpisodes() {
+            const simplecastJSON = await getEpisodesFromSimplecast();
+			const simplecastOBJ = JSON.parse(simplecastJSON);
+			setLatestEpisode(simplecastOBJ.collection[0].id);
+        }
+        getEpisodes();
+	}, []);
 
     return (
             <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 10}}>
                 <Stack className='home-header' horizontalAlign='center'>
                     Latest Episode
-                    <iframe title='latest-episode' height="200px" width="75%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/417cffe7-6511-4d45-83a2-f3ac7d14208c?dark=true"></iframe>
+                    <iframe title='latest-episode' height="200px" width="75%" frameborder="no" scrolling="no" seamless src={`https://player.simplecast.com/${latestEpisode}?dark=true`}></iframe>
                 </Stack>
                 <Stack className='home-header' horizontalAlign='center'>
                     Follow Us
