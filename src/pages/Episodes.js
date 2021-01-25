@@ -9,7 +9,6 @@ import { Button } from 'reactstrap';
 export default function Episodes (props) {
 
     const [episodes, setEpisodes] = useState([]);
-    const [searchInputPrev, setSearchInputPrev] = useState('');
     const [searchInput, setSearchInput] = useState('');
 
     //used for pagination, slices the episodes array into a window of 9 episodes
@@ -34,14 +33,9 @@ export default function Episodes (props) {
     //get the episodes from simplecast 
     useEffect(() => {
         getEpisodes();
+        // eslint-disable-next-line
     }, [searchInput]);
 
-    // filter episodes based on the search input
-    // useEffect(() => {
-    //     setEpisodes(episodes.filter((episode) => {
-    //         return episode.title.toLowerCase().includes(searchInput.toLowerCase());
-    //     }));
-    // }, [searchInput]);
     console.log('episodes', episodes);
 
     return (
@@ -49,7 +43,7 @@ export default function Episodes (props) {
             <StackItem className='episodes-header' horizontalAlign='start'>
                 Episodes
             </StackItem>
-            <Stack horizontalAlign='center' >
+            <Stack horizontalAlign='center' tokens={{ childrenGap: 50}}>
                 <Box
                     sx={{ 
                     margin: [ 3, 10, 25],
@@ -60,19 +54,24 @@ export default function Episodes (props) {
                         id='search'
                         name='search'
                         className='home-text'
+                        style={{color: 'white', fontSize: 'calc(5px + 2vw)'}}
                         value={searchInput}
                         onChange={(e) => {setSearchInput(e.target.value)}}
                     ></Input>
                 </Box>
                 <EpisodeCollection episodes={episodes.slice(left,right)} />
-                {(left > 0) && <Button  onClick={() => { 
-                    setLeft(left-9); 
-                    setRight(right-9); 
-                }}>Previous Page</Button>}
-                {(right <= episodes.length) && <Button  onClick={() => { 
-                    setLeft(left+9);
-                    setRight(right+9);
-                }}>Next Page</Button>}
+                <Stack horizontal tokens={{ childrenGap: 50 }}>
+                    {(left > 0) && <Button outline color='primary' Click={() => { 
+                        setLeft(left-9); 
+                        setRight(right-9); 
+                    }}>Previous Page</Button>}
+
+                    {(right <= episodes.length) && <Button outline color='primary' onClick={() => { 
+                        setLeft(left+9);
+                        setRight(right+9);
+                    }}>Next Page</Button>}
+                </Stack>
+                <br></br>
             </Stack>
             
         </div>

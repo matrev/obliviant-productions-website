@@ -48,7 +48,7 @@
 
 .episode-card-title {
     color: var(--text-red);
-    font-size: calc(10px + 2vmin);
+    font-size: calc(20px + 2vw);
     font-family: neue-kabel, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -61,7 +61,7 @@
     font-weight: 400;
     font-style: normal;
     width: calc(300px + 15vw);
-    font-size: calc(5px + 1vw);
+    font-size: calc(10px + 1vw);
 }
 
 /* Contact Page Styles */
