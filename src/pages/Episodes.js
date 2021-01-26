@@ -71,7 +71,7 @@ export default function Episodes (props) {
                         setRight(right+9);
                     }}>Next Page</Button>}
                 </Stack>
-                <br></br>
+                <br/>
             </Stack>
             
         </div>
