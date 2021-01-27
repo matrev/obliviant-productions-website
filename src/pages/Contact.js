@@ -15,13 +15,12 @@ export default function Contact () {
 
     function onClick() {
         setAlertName(name);
-        
-        emailjs.send(
-            "service_k2egvcs","template_yxyi0fw",{
-                to_name: "brother and sister",
-                from_name: name + '( ' + email + ')',
-                message: message,
-                }, 'user_fyEvKIMkjfSlu5DTVEuVR'
+        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_API_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_API_KEY, 
+                {
+                    to_name: "brother and sister",
+                    from_name: name + ' (' + email + ')',
+                    message: message,
+                }, process.env.REACT_APP_EMAILJS_USER_API_KEY
         ).then(() => {
             setIsEmailSent(true);
             setEmail('');
