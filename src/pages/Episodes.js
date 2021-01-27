@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EpisodeCollection from '../components/EpisodeCollection';
 import { Label, Input } from '@rebass/forms';
-import { Box } from 'rebass';
 import { Stack, StackItem } from '@fluentui/react';
 import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 import { Button } from 'reactstrap';
@@ -44,11 +43,7 @@ export default function Episodes (props) {
                 Episodes
             </StackItem>
             <Stack horizontalAlign='center' tokens={{ childrenGap: 50}}>
-                <Box
-                    sx={{ 
-                    margin: [ 3, 10, 25],
-                    width: [ 200 , null, 500]
-                }}>
+                <StackItem>
                     <Label htmlFor='search' className='home-text'>Search For an Episode</Label>
                     <Input
                         id='search'
@@ -58,15 +53,15 @@ export default function Episodes (props) {
                         value={searchInput}
                         onChange={(e) => {setSearchInput(e.target.value)}}
                     ></Input>
-                </Box>
+                </StackItem>
                 <EpisodeCollection episodes={episodes.slice(left,right)} />
                 <Stack horizontal tokens={{ childrenGap: 50 }}>
-                    {(left > 0) && <Button outline color='primary' Click={() => { 
+                    {(left > 0) && <Button outline className='episode-paginate-button' style={{backgroundColor: 'black', color: '#e05a4e', fontSize: 24}} onClick={() => { 
                         setLeft(left-9); 
                         setRight(right-9); 
                     }}>Previous Page</Button>}
 
-                    {(right <= episodes.length) && <Button outline color='primary' onClick={() => { 
+                    {(right <= episodes.length) && <Button outline className='episode-paginate-button' style={{backgroundColor: 'black', color: '#e05a4e', fontSize: 24}} onClick={() => { 
                         setLeft(left+9);
                         setRight(right+9);
                     }}>Next Page</Button>}

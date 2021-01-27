@@ -11,38 +11,44 @@ export default function Contact () {
     const [message, setMessage] = useState('');
 
     const [isError, setIsError] = useState(false);
+    const [isInputNull, setIsInputNull] = useState(null);
     const [isEmailSent, setIsEmailSent] = useState(false);
 
     function onClick() {
-        setAlertName(name);
-        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_API_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_API_KEY, 
+        if(name && email && message !== '') {
+            setAlertName(name);
+            emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_API_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_API_KEY, 
                 {
                     to_name: "brother and sister",
                     from_name: name + ' (' + email + ')',
                     message: message,
                 }, process.env.REACT_APP_EMAILJS_USER_API_KEY
-        ).then(() => {
-            setIsEmailSent(true);
-            setEmail('');
-            setMessage('');
-            setName('');
-        }).catch((error) => {
+                ).then(() => {
+                    setIsEmailSent(true);
+                    setEmail('');
+                    setMessage('');
+                    setName('');
+                }).catch((error) => {
+                    setIsError(true);
+                })
+        } else { 
             setIsError(true);
-        })
+            setIsInputNull(true);
+        }
     }
-
+            
     return (
         <div>
             <StackItem className='contact-header' horizontalAlign='start'>
                 Contact
             </StackItem>
             <center>
-                <div className='home-text' style={{width: '75%'}}>
+                <div className='contact-text' style={{width: '90%'}}>
                     Need to contact us about a business inquiry? Want to request a movie for us to watch? Have a TikTok you think we'd like? Email us... please
                 </div>
             </center>
             <br />
-            <Stack horizontalAlign='center' tokens={{ childrenGap: 10 }}>
+            <Stack horizontalAlign='center'>
                 <StackItem>
                     <Label htmlFor='name' className='home-text'>Name</Label>
                     <TextField
@@ -78,10 +84,15 @@ export default function Contact () {
                     ></TextField>
                 </StackItem>
                 { isEmailSent && <Alert color='success'> {alertName}, thanks for your email!</Alert>}
-                { isError && <Alert color='danger'> OOPS SOMETHING WENT WRONG ! PLEASE TRY AGAIN</Alert>}
-                <Button onClick={() => onClick()}>Submit</Button>
-                <br/>
+                
+                { isError && <Alert color='danger'> {isInputNull ? 'PLEASE ENTER IN VALID INFORMATION' : 'OOPS SOMETHING WENT WRONG ! PLEASE TRY AGAIN'}</Alert>}
+
             </Stack>
+            <br />
+            <center>
+                <Button className='contact-submit-button' style={{backgroundColor: 'black', color: '#ffb541', fontSize: 24}} onClick={() => onClick()}>Submit</Button>
+            </center>
+            <br />
         </div>
     )
 }

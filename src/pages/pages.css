@@ -7,13 +7,25 @@
 
 
 /* Home Page Styles */
-.home-text {
-    color: var(--text-white);
-    font-family: acumin-pro-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: calc(300px + 15vw);
-    font-size: calc(5px + 2vw);
+@media screen and (min-width: 601px) {
+    .home-text {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2vw;
+    }
+}
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .home-text {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+    }
 }
 
 .home-header {
@@ -55,23 +67,80 @@
     width: 100%;
 }
 
-.episode-card-description {
-    color: var(--text-white);
-    font-family: acumin-pro-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: calc(300px + 15vw);
-    font-size: calc(10px + 1vw);
+
+@media screen and (min-width: 601px) {
+    .episode-card-description {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: calc(300px + 15vw);
+        font-size: calc(2vw);
+    }
+}
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .episode-card-description {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: calc(300px + 15vw);
+        font-size: calc(5vw);
+    }
 }
 
-/* Contact Page Styles */
-
-.contact-header {
-    color: var(--text-yellow);
-    font-size: calc(40px + 2vmin);
+.episode-paginate-button {
     font-family: neue-kabel, sans-serif;
     font-weight: 800;
     font-style: normal;
-    padding-left: calc(15vmin);
+}
+
+
+/* Contact Page Styles */
+
+@media screen and (min-width: 601px) {
+    .contact-text { 
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2vw;
+    }
+    .contact-header {
+        color: var(--text-yellow);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: calc(15vmin);
+    }
+}
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .contact-text { 
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+    }
+    .contact-header {
+        color: var(--text-yellow);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: calc(10vmin);
+    }
+}
+
+
+.contact-submit-button {
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
