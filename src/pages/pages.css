@@ -37,26 +37,30 @@
 }
 
 /* About Page Styles */
-
-.about-header {
-    color: var(--text-blue);
-    font-size: calc(40px + 2vmin);
-    font-family: neue-kabel, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    padding-left: calc(15vmin);
+@media screen and (min-width: 601px) {
+    .about-header {
+        color: var(--text-blue);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: 15vmin;
+    }
+}
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .about-header {
+        color: var(--text-blue);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: 10vmin;
+    }
 }
 
 /* Episodes Page Styles */
-
-.episodes-header {
-    color: var(--text-red);
-    font-size: calc(40px + 2vmin);
-    font-family: neue-kabel, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    padding-left: calc(15vmin);
-}
 
 .episode-card-title {
     color: var(--text-red);
@@ -69,6 +73,15 @@
 
 
 @media screen and (min-width: 601px) {
+    .episodes-header {
+        color: var(--text-red);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: 15vmin;
+    }
+
     .episode-card-description {
         color: var(--text-white);
         font-family: acumin-pro-condensed, sans-serif;
@@ -76,18 +89,26 @@
         font-style: normal;
         width: calc(300px + 15vw);
         font-size: calc(2vw);
-    }
+    }  
 }
   
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
+    .episodes-header {
+        color: var(--text-red);
+        font-size: calc(40px + 2vmin);
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: 10vmin;
+    }
     .episode-card-description {
         color: var(--text-white);
         font-family: acumin-pro-condensed, sans-serif;
         font-weight: 400;
         font-style: normal;
         width: calc(300px + 15vw);
-        font-size: calc(5vw);
+        font-size: 5vw;
     }
 }
 
@@ -114,11 +135,11 @@
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: calc(15vmin);
+        padding-left: 15vmin;
     }
 }
   
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+/* If the screen size is 600px wide or less */
 @media screen and (max-width: 600px) {
     .contact-text { 
         color: var(--text-white);
@@ -133,7 +154,7 @@
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: calc(10vmin);
+        padding-left: 10vmin;
     }
 }
 
