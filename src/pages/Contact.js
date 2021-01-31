@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, StackItem, TextField } from '@fluentui/react';
+import { Stack, StackItem} from '@fluentui/react';
 import { Label, Button, Alert, Input } from 'reactstrap';
 import emailjs from 'emailjs-com';
 
@@ -63,7 +63,7 @@ export default function Contact () {
                     ></Input>
                 
                     <Label htmlFor='email' className='home-text'>Email</Label>
-                    <Input name="text" type='email'
+                    <Input type='email'
                         id='email'
                         name='email'
                         className='home-text' placeholder='example@mail.com'
