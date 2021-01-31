@@ -16,7 +16,7 @@ function App() {
 
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
 	const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' }); 
-	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' })
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' });
 
 	return (
 		<div className="App">
@@ -68,7 +68,6 @@ function App() {
 					</Stack>
 				}
 				{isTabletOrMobile &&
-				
 					<Navbar className="header-style" dark>
 						<NavbarBrand href="/" className="mr-auto">
 							<img src={require("./assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
@@ -133,7 +132,7 @@ function App() {
 						</Collapse>
 					</Navbar>}
 
-				{(isTabletOrMobileDevice && !isTabletOrMobile)&& 
+				{(isTabletOrMobileDevice && !isTabletOrMobile) && 
 					<Navbar className="header-style" dark>
 						<NavbarBrand href="/" className="mr-auto">
 							<img src={require("./assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
