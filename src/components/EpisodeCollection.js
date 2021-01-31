@@ -11,7 +11,7 @@ export default function EpisodeCollection (props) {
                     <Stack className='episode-card'  styles={{root: { width: '100%'}}} horizontalAlign='center'>
                             <Stack className='episode-card-title' horizontalAlign='center'>
                                 {episode.title}
-                                <audio controls src={episode.enclosure_url} />
+                                {/* <audio controls src={episode.enclosure_url} /> */}
                             </Stack>
                             <Stack className='episode-card-description'>
                                 {episode.description}
