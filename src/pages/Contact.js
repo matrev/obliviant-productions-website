@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stack, StackItem, TextField } from '@fluentui/react';
-import { Label, Button, Alert } from 'reactstrap';
+import { Label, Button, Alert, Input } from 'reactstrap';
 import emailjs from 'emailjs-com';
 
 export default function Contact () {
@@ -49,40 +49,47 @@ export default function Contact () {
             </center>
             <br />
             <Stack horizontalAlign='center'>
-                <StackItem>
                     <Label htmlFor='name' className='home-text'>Name</Label>
-                    <TextField
+                    <Input 
                         id='name'
                         name='name'
                         className='home-text'
-                        style={{ color: 'white', backgroundColor: 'black', fontSize: 24 }}
+                        style={{ color: 'white',
+                            backgroundColor: 'black',
+                            fontSize: 24,
+                            width: '50%' }}
                         value={name}
                         onChange={(e) => {setName(e.target.value)}}
-                    ></TextField>
-                </StackItem>
-                <StackItem>
+                    ></Input>
+                
                     <Label htmlFor='email' className='home-text'>Email</Label>
-                    <TextField
+                    <Input name="text" type='email'
                         id='email'
                         name='email'
-                        className='home-text'
-                        style={{ color: 'white', backgroundColor: 'black', fontSize: 24 }}
+                        className='home-text' placeholder='example@mail.com'
+                        style={{ color: 'white',
+                            backgroundColor: 'black',
+                            fontSize: 24,
+                            width: '50%'
+                        }}
                         value={email}
                         onChange={(e) => {setEmail(e.target.value)}}
-                    ></TextField>
-                </StackItem>
-                <StackItem>    
+                    />
+                   
                     <Label htmlFor='message' className='home-text'>Message</Label>
-                    <TextField multiline resizable={false}
+                    <Input type='textarea'
                         id='message'
                         name='message'
                         className='home-text'
-                        rows={6}
-                        style={{ color: 'white', backgroundColor: 'black', fontSize: 24 }}
+                        style={{ color: 'white',
+                            backgroundColor: 'black',
+                            fontSize: 24,
+                            width: '50%'
+                        }}
                         value={message}
                         onChange={(e) => {setMessage(e.target.value)}}
-                    ></TextField>
-                </StackItem>
+                    ></Input>
+                
                 { isEmailSent && <Alert color='success'> {alertName}, thanks for your email!</Alert>}
                 
                 { isError && <Alert color='danger'> {isInputNull ? 'PLEASE ENTER IN VALID INFORMATION' : 'OOPS SOMETHING WENT WRONG ! PLEASE TRY AGAIN'}</Alert>}

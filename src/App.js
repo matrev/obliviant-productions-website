@@ -111,23 +111,6 @@ function App() {
 							<NavItem>
 								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
-							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
-								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
-									<img src={require("./assets/spotifyIcon.png")} style={{width: 32}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
-									<img src={require("./assets/twitterIcon.png")} style={{width: 32}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
-									<img src={require("./assets/instaIcon.png")} style={{width: 40}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://discord.gg/QY2BMPeE' target='_blank' rel="noopener noreferrer">
-									<img src={require("./assets/discordIcon")} style={{width: 40}} alt="Spotify Badge" />
-								</a>
-							</Stack>
 						</Nav>
 						</Collapse>
 					</Navbar>}
@@ -176,23 +159,6 @@ function App() {
 							<NavItem>
 								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 							</NavItem>
-							<Stack horizontal verticalAlign='center' horizontalAlign='space-evenly' tokens={{childrenGap: 1}}>
-								<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
-									<img src={require("./assets/spotifyIcon.png")} style={{width: 32}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
-									<img src={require("./assets/twitterIcon.png")} style={{width: 32}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
-									<img src={require("./assets/instaIcon.png")} style={{width: 40}} alt="Spotify Badge" />
-								</a>
-
-								<a href='https://discord.gg/QY2BMPeE' target='_blank'rel="noopener noreferrer" >
-									<img src={require("./assets/discordIcon")} style={{width: 40}} alt="Spotify Badge" />
-								</a>
-							</Stack>
 						</Nav>
 						</Collapse>
 					</Navbar>

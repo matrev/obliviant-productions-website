@@ -42,7 +42,7 @@ export default function About () {
                     </Col>
                     <Col xs="6">
                         <Stack horizontalAlign='center'>
-                            <img src={require('../assets/anthony.jpg')}></img>
+                            <img src={require('../assets/anthony.jpg')} alt='anthony'></img>
                             <p>
                                 Hello, Im Anthony. Outside of this podcast, I'm a Junior in college studying Computer Science. I also stream on <a href='https://twitch.tv/matrev_' rel="noopener noreferrer" target='_blank'>Twitch</a> (T/R/F) and occasionally make <a href="https://www.youtube.com/channel/UCDEAk4BVjNOky_zN0yLxfyQ" rel='noopener noreferrer' target='_blank'>YouTube videos</a>. I live in College Station with my girlfriend and producer of the pod, Keila. That is all... good day.
                             </p>
@@ -53,14 +53,14 @@ export default function About () {
             {(isTabletOrMobile || isTabletOrMobileDevice) && 
                 <Stack horizontalAlign='center' className='home-text'>
                     <Stack horizontalAlign='center'>
-                        <img src={require("../assets/livia.jpg")} alt='livia'></img>
-                        <p style={{width: '90%'}}>
+                        <img style={{width: '90%'}} src={require("../assets/livia.jpg")} alt='livia'></img>
+                        <p style={{width: '75%'}}>
                             Hi! My name is Livia. When I’m not the better host of The Brother Sister Show, I’m a <a href='https://liviatrevino.me' rel='noopener noreferrer' target='_blank'>content specialist</a>. Don’t know what that is? Nobody does. In my free time, I like to <a href='https://avitalash.com' rel='noopener noreferrer' target='_blank'>design websites</a>, produce web series, write, and watch movies. I have a cat named Ari (after Ari Aster) and live in Austin with my boyfriend and producer of the pod, Sebastian.
                         </p>
                     </Stack>
                     <Stack horizontalAlign='center'>
-                        <img src={require('../assets/anthony.jpg')}></img>
-                        <p style={{width: '90%'}}>
+                        <img style={{width: '90%'}} src={require('../assets/anthony.jpg')} alt='anthony'></img>
+                        <p style={{width: '75%'}}>
                             Hello, Im Anthony. Outside of this podcast, I'm a Junior in college studying Computer Science. I also stream on <a href='https://twitch.tv/matrev_' rel="noopener noreferrer" target='_blank'>Twitch</a> (T/R/F) and occasionally make <a href="https://www.youtube.com/channel/UCDEAk4BVjNOky_zN0yLxfyQ" rel='noopener noreferrer' target='_blank'>YouTube videos</a>. I live in College Station with my girlfriend and producer of the pod, Keila. That is all... good day.
                         </p>
                     </Stack>
