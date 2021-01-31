@@ -29,11 +29,11 @@ export default function EpisodePage (props) {
                     <StackItem className='episodes-header' horizontalAlign='start'>
                             {episodes[0].title}
                     </StackItem>
-                    <Stack className='home-text' horizontalAlign='center' tokens={{ childrenGap: 50}}>
-                        <Stack tokens={{ childrenGap: 50 }}>
+                    <Stack className='contact-text' horizontalAlign='center' tokens={{ childrenGap: 50}}>
+                        <p style={{width: '75%'}}>
                             {episodes[0].description}
-                            <audio controls src={episodes.enclosure_url} />
-                        </Stack>
+                        </p>
+                        <audio controls src={episodes.enclosure_url} />
                         <br/>
                     </Stack>
                     <Stack className='home-header' horizontalAlign='center'>
