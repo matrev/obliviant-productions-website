@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
 import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu} from 'reactstrap';
 import { Stack } from '@fluentui/react';
+import EpisodePage from './components/EpisodePage';
 
 function App() {
 
@@ -166,10 +167,11 @@ function App() {
 				<hr className='nav-bottom-border' />
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
-				<Route path="/episodes/all" render={() => <Episodes />} />
-				<Route path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
-				<Route path="/episodes/livia" render={() => <Episodes isLivia />} />
-				<Route path="/episodes/guest" render={() => <Episodes isGuest />} />
+				<Route exact path="/episodes/all" render={() => <Episodes />} />
+				<Route exact path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
+				<Route exact path="/episodes/livia" render={() => <Episodes isLivia />} />
+				<Route exact path="/episodes/guest" render={() => <Episodes isGuest />} />
+				<Route path={`/episodes/episode/:episodeSlug`} render={() => <EpisodePage />} />
 				<Route path="/contact" component={Contact} />
 			</BrowserRouter>
 		</div>

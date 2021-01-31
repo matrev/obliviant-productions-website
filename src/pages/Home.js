@@ -20,7 +20,7 @@ export default function Home () {
             <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 10}}>
                 <Stack className='home-header' horizontalAlign='center'>
                     Latest Episode
-                    <iframe title='latest-episode' height="200px" width="75%" frameborder="no" scrolling="no" seamless src={`https://player.simplecast.com/${latestEpisode}?dark=true`}></iframe>
+                    <iframe title='latest-episode' height="200px" width="75%" frameBorder="no" scrolling="no" seamless src={`https://player.simplecast.com/${latestEpisode}?dark=true`}></iframe>
                 </Stack>
                 <Stack className='home-header' horizontalAlign='center'>
                     Follow Us
@@ -30,17 +30,17 @@ export default function Home () {
 							</a>
 
 							<a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
-								<img src={require("../assets/twitterIcon.png")} style={{width: 64}} alt="Spotify Badge" />
+								<img src={require("../assets/twitterIcon.png")} style={{width: 64}} alt="Twitter Badge" />
 							</a>
 
 							<a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
-								<img src={require("../assets/instaIcon.png")} style={{width: 64}} alt="Spotify Badge" />
+								<img src={require("../assets/instaIcon.png")} style={{width: 64}} alt="Instagram Badge" />
 							</a>
 
 							<a href='https://discord.gg/QY2BMPeE' target='_blank' rel="noopener noreferrer" style={{paddingLeft: 5, paddingTop: 5}}>
-								<img src={require("../assets/discordIcon.png")} style={{width: 58, height: 64}} alt="Spotify Badge" />
+								<img src={require("../assets/discordIcon.png")} style={{width: 58, height: 64}} alt="Discord Badge" />
 							</a>
-						</Stack>
+					</Stack>
                 </Stack>
             </Stack>    
     )
