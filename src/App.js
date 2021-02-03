@@ -28,7 +28,7 @@ function App() {
 				{(isDesktopOrLaptop && !isTabletOrMobile) &&
 					<Stack className='header-style' horizontal horizontalAlign='center' tokens={{childrenGap: 0}} >
 						
-						<Stack horizontal verticalAlign='center' horizontalAlign='end'>
+						<Stack horizontal verticalAlign='center' horizontalAlign='end' style={{width: '322.017px', height: '220.9px'}}>
 							<NavLink className='nav-link'  href='/'>Home</NavLink>
 							<NavLink className='nav-link' href="/about">About</NavLink>
 						</Stack>
@@ -69,7 +69,7 @@ function App() {
 							</UncontrolledDropdown>
 							<NavLink className='nav-link' href='/contact'>Contact</NavLink>
 						</Stack>
-					</Stack>
+					</Stack> 
 				}
 				{isTabletOrMobile &&
 					<Navbar className="header-style" dark>

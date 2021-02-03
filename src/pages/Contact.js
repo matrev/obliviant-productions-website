@@ -45,15 +45,16 @@ export default function Contact () {
             <Stack className='contact-header' horizontalAlign='center'>
                 Contact
             </Stack>
-            <Stack horizontal={isDesktopOrLaptop} horizontalAlign='space-evenly' verticalAlign='space-evenly' tokens={{childrenGap: 20}}>
-                <Stack verticalAlign='center' style={{ textAlign: 'center'}} className='contact-text'>
+            <Stack horizontal={isDesktopOrLaptop} horizontalAlign='center' verticalAlign='space-around'  tokens={{childrenGap: 20}} >
+                <Stack horizontalAlign='end'  style={{ textAlign: 'center' }} className='contact-text'>
                     Need to contact us about a business inquiry? <br />
                     Want to request a movie for us to watch? <br />
                     Have a TikTok you think we'd like? <br />
-                    Email us... please. 
+                    Email us... please.
+
                 </Stack>
-                <Stack horizontalAlign='center' tokens={{childrenGap: 10}}>
-                    <Stack horizontalAlign='center'>
+                <Stack horizontalAlign='center' tokens={{childrenGap: 20}} style={{width: isDesktopOrLaptop ? '50%' : '90%'}}>
+                    <Stack horizontalAlign='center' style={{width: '100%'}} >
                         <Label htmlFor='name' className='home-text'>Name</Label>
                         <Input 
                             id='name'
@@ -62,14 +63,14 @@ export default function Contact () {
                             style={{ color: 'white',
                                 backgroundColor: 'black',
                                 fontSize: 24,
-                                width: '90%' 
+                                width: isDesktopOrLaptop ? '50%' : '90%'
                             }}
                             value={name}
                             onChange={(e) => {setName(e.target.value)}}
                         ></Input>
                     </Stack>
                     
-                    <Stack horizontalAlign='center'>
+                    <Stack horizontalAlign='center' style={{width: '100%'}}>
                         <Label htmlFor='email' className='home-text'>Email</Label>
                         <Input type='email'
                             id='email'
@@ -78,14 +79,14 @@ export default function Contact () {
                             style={{ color: 'white',
                                 backgroundColor: 'black',
                                 fontSize: 24,
-                                width: '90%'
+                                width: isDesktopOrLaptop ? '50%' : '90%'
                             }}
                             value={email}
                             onChange={(e) => {setEmail(e.target.value)}}
                         />
                     </Stack>
                     
-                    <Stack horizontalAlign='center'>
+                    <Stack horizontalAlign='center' style={{width: '100%'}}>
                         <Label htmlFor='message' className='home-text'>Message</Label>
                         <Input type='textarea'
                             id='message'
@@ -95,14 +96,15 @@ export default function Contact () {
                                 backgroundColor: 'black',
                                 fontSize: 24,
                                 height: 100,
-                                width: '90%'
+                                width: isDesktopOrLaptop ? '50%' : '90%',
+                                height: '20vh'
                             }}
                             value={message}
                             onChange={(e) => {setMessage(e.target.value)}}
                         ></Input>
                     </Stack>
                     
-                    <Stack horizontalAlign='center'>
+                    <Stack horizontalAlign='center' style={{width: '100%'}}>
                         { isEmailSent && <Alert color='success'> {alertName}, thanks for your email!</Alert>}
                         
                         { isError && <Alert color='danger'> {isInputNull ? 'PLEASE ENTER IN VALID INFORMATION' : 'OOPS SOMETHING WENT WRONG ! PLEASE TRY AGAIN'}</Alert>}

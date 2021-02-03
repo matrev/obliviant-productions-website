@@ -26,35 +26,26 @@ export default function EpisodePage (props) {
         <div>
             {episodes[0] ? 
                 <div>
-                    <StackItem className='episodes-header' horizontalAlign='start'>
-                            {episodes[0].title}
-                    </StackItem>
+                    <Stack className='episodes-header' horizontalAlign='center' style={{ textAlign: 'center' }}>
+                        {episodes[0].title}
+                    </Stack>
                     <Stack className='contact-text' horizontalAlign='center' tokens={{ childrenGap: 50}}>
-                        <p style={{width: '75%'}}>
+                        <p style={{width: '75%', textAlign: 'center'}}>
                             {episodes[0].description}
                         </p>
-                        <audio controls src={episodes.enclosure_url} />
+                        <audio controls src={episodes[0].enclosure_url} style={{width: '75%'}}/>
                         <br/>
                     </Stack>
                     <Stack className='home-header' horizontalAlign='center'>
-                    Follow Us
-                    <Stack horizontal verticalAlign='center' horizontalAlign='space-between' tokens={{childrenGap: 10}}>
-                        <a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
-                            <img src={require("../assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />
-                        </a>
-
-                        <a href='https://twitter.com/brosisshow' target='_blank' rel="noopener noreferrer">
+                    Tweet about this episode
+                    <Stack horizontal verticalAlign='center' horizontalAlign='center'>
+                        <a href={`https://twitter.com/intent/tweet?text=Have%20you%20listened%20to%20The%20Brother%20Sister%20Show%20yet%3F%20Check%20it%20out%20here%3A%20https%3A%2F%2Fthe-brother-sister-show.simplecast.com%2Fepisodes%2F${episodes.slug}`} 
+                            target='_blank' 
+                            rel="noopener noreferrer"
+                            >
                             <img src={require("../assets/twitterIcon.png")} style={{width: 64}} alt="Twitter Badge" />
                         </a>
-
-                        <a href='https://instagram.com/brothersistershow' target='_blank' rel="noopener noreferrer">
-                            <img src={require("../assets/instaIcon.png")} style={{width: 64}} alt="Instagram Badge" />
-                        </a>
-
-                        <a href='https://discord.gg/QY2BMPeE' target='_blank' rel="noopener noreferrer" style={{paddingLeft: 5, paddingTop: 5}}>
-                            <img src={require("../assets/discordIcon.png")} style={{width: 58, height: 64}} alt="Discord Badge" />
-                        </a>
-					</Stack>
+                    </Stack>
                 </Stack>
                 </div> 
                 : 
