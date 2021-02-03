@@ -7,7 +7,6 @@ export default function Home () {
 	const [latestEpisode, setLatestEpisode] = useState();
 
 	useEffect(() => {
-
         async function getEpisodes() {
             const simplecastJSON = await getEpisodesFromSimplecast();
 			const simplecastOBJ = JSON.parse(simplecastJSON);
@@ -17,13 +16,17 @@ export default function Home () {
 	}, []);
 
     return (
-            <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 10}}>
-                <Stack className='home-header' horizontalAlign='center'>
-                    Latest Episode
-                    <iframe title='latest-episode' height="200px" width="75%" frameBorder="no" scrolling="no" seamless src={`https://player.simplecast.com/${latestEpisode}?dark=true`}></iframe>
+            <Stack vertical horizontalAlign='space-between' tokens={{childrenGap: 20}}>
+                <Stack className='home-header' horizontalAlign='center' tokens={{ childrenGap: 20 }} >
+                    <div>
+						Latest Episode
+					</div>
+                    <iframe title='latest-episode' height="200px" width="50%" frameBorder="no" scrolling="no" seamless src={`https://player.simplecast.com/${latestEpisode}?dark=true`}></iframe>
                 </Stack>
-                <Stack className='home-header' horizontalAlign='center'>
-                    Follow Us
+                <Stack className='home-header' horizontalAlign='center' tokens={{ childrenGap: 20 }} >
+                    <div>
+						Follow Us
+					</div>
                     <Stack horizontal verticalAlign='center' horizontalAlign='space-between' tokens={{childrenGap: 10}}>
 							<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
 								<img src={require("../assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />

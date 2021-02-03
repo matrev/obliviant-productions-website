@@ -5,7 +5,6 @@
     --text-white: #ffffff;
 }
 
-
 /* Home Page Styles */
 @media screen and (min-width: 601px) {
     .home-text {
@@ -30,7 +29,7 @@
 
 .home-header {
     color: var(--text-white);
-    font-size: calc(40px + 2vmin);
+    font-size: xx-large;
     font-family: neue-kabel, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -40,11 +39,10 @@
 @media screen and (min-width: 601px) {
     .about-header {
         color: var(--text-blue);
-        font-size: calc(40px + 2vmin);
+        font-size: xxx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 15vmin;
     }
 }
   
@@ -52,34 +50,22 @@
 @media screen and (max-width: 600px) {
     .about-header {
         color: var(--text-blue);
-        font-size: calc(40px + 2vmin);
+        font-size: xx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 10vmin;
     }
 }
 
 /* Episodes Page Styles */
 
-.episode-card-title {
-    color: var(--text-red);
-    font-size: calc(20px + 2vw);
-    font-family: neue-kabel, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    width: 100%;
-}
-
-
 @media screen and (min-width: 601px) {
     .episodes-header {
         color: var(--text-red);
-        font-size: calc(40px + 2vmin);
+        font-size: xxx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 15vmin;
     }
 
     .episode-card-description {
@@ -89,18 +75,26 @@
         font-style: normal;
         width: calc(300px + 15vw);
         font-size: calc(2vw);
-    }  
+    } 
+
+    .episode-card-title {
+        color: var(--text-red);
+        font-size: xxx-large;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        width: 100%;
+    }
 }
   
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
     .episodes-header {
         color: var(--text-red);
-        font-size: calc(40px + 2vmin);
+        font-size: xx-large;;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 10vmin;
     }
     .episode-card-description {
         color: var(--text-white);
@@ -110,6 +104,15 @@
         width: calc(300px + 15vw);
         font-size: 5vw;
     }
+
+    .episode-card-title {
+        color: var(--text-red);
+        font-size: xx-large;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        width: 100%;
+    }
 }
 
 .episode-paginate-button {
@@ -118,9 +121,7 @@
     font-style: normal;
 }
 
-
 /* Contact Page Styles */
-
 @media screen and (min-width: 601px) {
     .contact-text { 
         color: var(--text-white);
@@ -131,11 +132,10 @@
     }
     .contact-header {
         color: var(--text-yellow);
-        font-size: calc(40px + 2vmin);
+        font-size: xxx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 15vmin;
     }
 }
   
@@ -150,14 +150,12 @@
     }
     .contact-header {
         color: var(--text-yellow);
-        font-size: calc(40px + 2vmin);
+        font-size: xx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-        padding-left: 10vmin;
     }
 }
-
 
 .contact-submit-button {
     font-family: neue-kabel, sans-serif;

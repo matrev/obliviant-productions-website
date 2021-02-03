@@ -12,7 +12,7 @@ export default function About () {
 
     return (
         <div>
-            <Stack className='about-header' horizontalAlign='start'>
+            <Stack className='about-header' horizontalAlign='center'>
                 About
             </Stack>
             

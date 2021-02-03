@@ -6,7 +6,10 @@ import About from './pages/About';
 import Episodes from './pages/Episodes';
 import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
-import { Navbar, Nav, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu} from 'reactstrap';
+import { Navbar, Nav, NavbarBrand, NavLink,
+		 NavbarToggler, Collapse, NavItem, 
+		 UncontrolledDropdown, DropdownToggle, 
+		 DropdownItem, DropdownMenu} from 'reactstrap';
 import { Stack } from '@fluentui/react';
 import EpisodePage from './components/EpisodePage';
 
@@ -164,7 +167,7 @@ function App() {
 						</Collapse>
 					</Navbar>
 				}
-				<hr className='nav-bottom-border' />
+				
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
 				<Route exact path="/episodes/all" render={() => <Episodes />} />

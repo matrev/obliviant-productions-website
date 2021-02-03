@@ -39,9 +39,9 @@ export default function Episodes (props) {
 
     return (
         <div>
-            <StackItem className='episodes-header' horizontalAlign='start'>
-                Episodes
-            </StackItem>
+            <Stack className='episodes-header' horizontalAlign='center'>
+                    Episodes
+            </Stack>
             <Stack horizontalAlign='center' tokens={{ childrenGap: 50}}>
                 <StackItem>
                     <Label htmlFor='search' className='home-text'>Search For an Episode</Label>
