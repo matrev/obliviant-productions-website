@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, StackItem} from '@fluentui/react';
+import { Stack } from '@fluentui/react';
 import { Label, Button, Alert, Input } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
 import emailjs from 'emailjs-com';
@@ -46,7 +46,7 @@ export default function Contact () {
                 Contact
             </Stack>
             <Stack horizontal={isDesktopOrLaptop} horizontalAlign='center' verticalAlign='space-around'  tokens={{childrenGap: 20}} >
-                <Stack horizontalAlign='end'  style={{ textAlign: 'center' }} className='contact-text'>
+                <Stack horizontalAlign='end' verticalAlign='center' style={{ textAlign: 'center' }} className='contact-text'>
                     Need to contact us about a business inquiry? <br />
                     Want to request a movie for us to watch? <br />
                     Have a TikTok you think we'd like? <br />
@@ -95,7 +95,6 @@ export default function Contact () {
                             style={{ color: 'white',
                                 backgroundColor: 'black',
                                 fontSize: 24,
-                                height: 100,
                                 width: isDesktopOrLaptop ? '50%' : '90%',
                                 height: '20vh'
                             }}
@@ -113,6 +112,7 @@ export default function Contact () {
                     </Stack>
                 </Stack>
             </Stack>
+            <br />
         </div>
     )
 }

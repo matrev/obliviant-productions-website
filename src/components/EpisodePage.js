@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Stack, StackItem } from '@fluentui/react';
+import { Stack } from '@fluentui/react';
 
 import { getEpisodesFromSimplecast } from '../utilities/Simplecast';
 import { Spinner } from 'reactstrap';
@@ -46,6 +46,7 @@ export default function EpisodePage (props) {
                             <img src={require("../assets/twitterIcon.png")} style={{width: 64}} alt="Twitter Badge" />
                         </a>
                     </Stack>
+                    <br/><br/>
                 </Stack>
                 </div> 
                 : 

@@ -27,7 +27,7 @@ export default function Home () {
                     <div>
 						Follow Us
 					</div>
-                    <Stack horizontal verticalAlign='center' horizontalAlign='space-between' tokens={{childrenGap: 10}}>
+                    <Stack horizontal verticalAlign='center' horizontalAlign='space-between' tokens={{childrenGap: 30}}>
 							<a href='https://open.spotify.com/show/0J0EQrHUMKJd9gbN9nQdh1' target='_blank' rel="noopener noreferrer" style={{paddingRight: '5px'}}>
 								<img src={require("../assets/spotifyIcon.png")} style={{width: 64}} alt="Spotify Badge" />
 							</a>
