@@ -39,7 +39,7 @@ export default function EpisodePage (props) {
                     <Stack className='home-header' horizontalAlign='center'>
                     Tweet about this episode
                     <Stack horizontal verticalAlign='center' horizontalAlign='center'>
-                        <a href={`https://twitter.com/intent/tweet?text=Have%20you%20listened%20to%20The%20Brother%20Sister%20Show%20yet%3F%20Check%20it%20out%20here%3A%20https%3A%2F%2Fthe-brother-sister-show.simplecast.com%2Fepisodes%2F${episodes.slug}`} 
+                        <a href={`https://twitter.com/intent/tweet?text=Have%20you%20listened%20to%20The%20Brother%20Sister%20Show%20yet%3F%20Check%20it%20out%20here%3A%20https%3A%2F%2Fthe-brother-sister-show.simplecast.com%2Fepisodes%2F${episodes[0].slug}`} 
                             target='_blank' 
                             rel="noopener noreferrer"
                             >
