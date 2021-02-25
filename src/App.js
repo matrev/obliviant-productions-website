@@ -12,6 +12,7 @@ import { Navbar, Nav, NavbarBrand, NavLink,
 		 DropdownItem, DropdownMenu} from 'reactstrap';
 import { Stack } from '@fluentui/react';
 import EpisodePage from './components/EpisodePage';
+import firebase from 'firebase';
 
 function App() {
 
@@ -65,6 +66,11 @@ function App() {
 											Guest Appearances
 										</DropdownItem>
 									</NavLink>
+									<NavLink className='nav-link' href='/episodes/bonus'>
+										<DropdownItem>
+											Bonus
+										</DropdownItem>
+									</NavLink>
 								</DropdownMenu>
 							</UncontrolledDropdown>
 							<NavLink className='nav-link' href='/contact'>Contact</NavLink>
@@ -108,6 +114,11 @@ function App() {
 									<NavLink className='nav-link' href='/episodes/guest'>
 										<DropdownItem>
 											Guest Appearances
+										</DropdownItem>
+									</NavLink>
+									<NavLink className='nav-link' href='/episodes/bonus'>
+										<DropdownItem>
+											Bonus
 										</DropdownItem>
 									</NavLink>
 								</DropdownMenu>
@@ -158,6 +169,11 @@ function App() {
 											Guest Appearances
 										</DropdownItem>
 									</NavLink>
+									<NavLink className='nav-link' href='/episodes/bonus'>
+										<DropdownItem>
+											Bonus
+										</DropdownItem>
+									</NavLink>
 								</DropdownMenu>
 							</UncontrolledDropdown>
 							<NavItem>
@@ -170,10 +186,15 @@ function App() {
 				
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
-				<Route exact path="/episodes/all" render={() => <Episodes />} />
+				<Route exact path="/episodes/all" render={() => {
+					// console.log('testing')
+					// defaultAnalytics.logEvent('test', 'test'); 
+					return <Episodes />
+				}} />
 				<Route exact path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
 				<Route exact path="/episodes/livia" render={() => <Episodes isLivia />} />
 				<Route exact path="/episodes/guest" render={() => <Episodes isGuest />} />
+				<Route exact path="/episodes/bonus" render={() => <Episodes isBonus />} />
 				<Route path={`/episodes/episode/:episodeSlug`} render={() => <EpisodePage />} />
 				<Route path="/contact" component={Contact} />
 			</BrowserRouter>

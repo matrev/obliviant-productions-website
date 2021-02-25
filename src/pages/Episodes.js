@@ -19,11 +19,13 @@ export default function Episodes (props) {
         const simplecastOBJ = JSON.parse(simplecastJSON);
         setEpisodes(simplecastOBJ.collection.filter((episode) => {
             if (props.isGuest) {
-                return episode.title.toLowerCase().includes('ft.') && episode.title.toLowerCase().includes(searchInput.toLowerCase());
+                return (episode.title.toLowerCase().includes('ft.') && episode.title.toLowerCase().includes(searchInput.toLowerCase()));
             } else if (props.isAnthony) {
                 return episode.description.toLowerCase().includes('anthony\'s pick') && episode.title.toLowerCase().includes(searchInput.toLowerCase());
             } else if (props.isLivia) {
                 return (episode.description.toLowerCase().includes('livia\'s pick')) && episode.title.toLowerCase().includes(searchInput.toLowerCase());
+            } else if (props.isBonus) {
+                return (episode.type.includes('bonus') && episode.title.toLowerCase().includes(searchInput.toLowerCase()));
             }
             return episode.title.toLowerCase().includes(searchInput.toLowerCase());
         }));
