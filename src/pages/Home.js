@@ -43,6 +43,10 @@ export default function Home () {
 							<a href='https://discord.gg/QY2BMPeE' target='_blank' rel="noopener noreferrer" style={{paddingLeft: 5, paddingTop: 5}}>
 								<img src={require("../assets/discordIcon.png")} style={{width: 58, height: 64}} alt="Discord Badge" />
 							</a>
+
+							<a href='https://www.youtube.com/channel/UCZ67yGlb_0Dfl3-KvuQjXKQ' target='_blank' rel="noopener noreferrer" style={{paddingLeft: 5, paddingBottom: 5}}>
+								<img src={require("../assets/yt.png")} style={{width: 66, height: 54}} alt="Youtube Badge" />
+							</a>
 					</Stack>
                 </Stack>
             </Stack>    
