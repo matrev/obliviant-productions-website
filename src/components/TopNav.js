@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Stack } from '@fluentui/react';
 import { Navbar, Nav, NavbarBrand, NavLink,
-    NavbarToggler, Collapse, NavItem, 
-    UncontrolledDropdown, DropdownToggle, 
-    DropdownItem, DropdownMenu} from 'reactstrap';
+    NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
 import "../styles/TopNav.css";
 

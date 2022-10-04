@@ -5,19 +5,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Videos from './pages/Videos';
 import Contact from './pages/Contact';
-import { useMediaQuery } from 'react-responsive';
 import { TopNav } from './components/TopNav';
 // import firebase from 'firebase';
 
 function App() {
-
-	const [collapsed, setCollapsed] = useState(true);
-	const toggleNavbar = () => setCollapsed(!collapsed);
-
-	const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' });
-	const isTabletOrMobileDevice = useMediaQuery({ query: '(max-device-width: 1224px)' }); 
-	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' });
-
 	return (
 		<div className="App">
 			<BrowserRouter basename={"/"}>
