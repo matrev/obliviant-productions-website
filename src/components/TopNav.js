@@ -20,7 +20,7 @@ export function TopNav (){
     return (
         <Navbar dark>
             <NavbarBrand href="/" className="mr-auto">
-                <img src={require("../assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
+                <img src={require("../assets/logo.PNG")} style={{width: 100}} alt="Navigation bar brand logo"/>
             </NavbarBrand>
             {isTabletOrMobile && <NavbarToggler onClick={toggleNavbar} className="mr-2" /> }
             <Collapse isOpen={collapsed} navbar={isTabletOrMobile}>
