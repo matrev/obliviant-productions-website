@@ -3,16 +3,11 @@ import { Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import Episodes from './pages/Episodes';
+import Videos from './pages/Videos';
 import Contact from './pages/Contact';
 import { useMediaQuery } from 'react-responsive';
-import { Navbar, Nav, NavbarBrand, NavLink,
-		 NavbarToggler, Collapse, NavItem, 
-		 UncontrolledDropdown, DropdownToggle, 
-		 DropdownItem, DropdownMenu} from 'reactstrap';
-import { Stack } from '@fluentui/react';
-import EpisodePage from './components/EpisodePage';
-import firebase from 'firebase';
+import { TopNav } from './components/TopNav';
+// import firebase from 'firebase';
 
 function App() {
 
@@ -26,176 +21,11 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter basename={"/"}>
-				{(isDesktopOrLaptop && !isTabletOrMobile) &&
-					<Stack className='header-style' horizontal horizontalAlign='center' tokens={{childrenGap: 0}} >
-						
-						<Stack horizontal verticalAlign='center' horizontalAlign='end' style={{width: '322.017px', height: '220.9px'}}>
-							<NavLink className='nav-link'  href='/'>Home</NavLink>
-							<NavLink className='nav-link' href="/about">About</NavLink>
-						</Stack>
-
-						<Stack className='logo' horizontalAlign='center' verticalAlign='center'>
-							<a href="/">
-								<img src={require("./assets/logo.png")} style={{width: 256}} alt="Navigation bar brand logo"/>
-							</a>	
-						</Stack>	
-
-						<Stack horizontal verticalAlign='center' horizontalAlign='start'>
-							<UncontrolledDropdown inNavbar>
-								<DropdownToggle className='nav-link' nav caret>
-									Episodes
-								</DropdownToggle>
-								<DropdownMenu center="true">
-									<NavLink className='nav-link' href='/episodes/all'>
-										<DropdownItem>
-											All
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/anthony'>
-										<DropdownItem>
-											Anthony's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/livia'>
-										<DropdownItem>
-											Livia's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/guest'>
-										<DropdownItem>
-											Guest Appearances
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/bonus'>
-										<DropdownItem>
-											Bonus
-										</DropdownItem>
-									</NavLink>
-								</DropdownMenu>
-							</UncontrolledDropdown>
-							<NavLink className='nav-link' href='/contact'>Contact</NavLink>
-						</Stack>
-					</Stack> 
-				}
-				{isTabletOrMobile &&
-					<Navbar className="header-style" dark>
-						<NavbarBrand href="/" className="mr-auto">
-							<img src={require("./assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
-						</NavbarBrand>
-						<NavbarToggler onClick={toggleNavbar} className="mr-2" />
-						<Collapse isOpen={!collapsed} navbar>
-						<Nav navbar style={{ alignItems: 'center' }}>
-							<NavItem>
-								<NavLink className='nav-link' href='/'>Home</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink className='nav-link' href="/about">About</NavLink>
-							</NavItem>
-							<UncontrolledDropdown inNavbar>
-								<DropdownToggle className='nav-link' nav caret>
-									Episodes
-								</DropdownToggle>
-								<DropdownMenu center="true">
-									<NavLink className='nav-link' href='/episodes/all'>
-										<DropdownItem>
-											All
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/anthony'>
-										<DropdownItem>
-											Anthony's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/livia'>
-										<DropdownItem>
-											Livia's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/guest'>
-										<DropdownItem>
-											Guest Appearances
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/bonus'>
-										<DropdownItem>
-											Bonus
-										</DropdownItem>
-									</NavLink>
-								</DropdownMenu>
-							</UncontrolledDropdown>
-							<NavItem>
-								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
-							</NavItem>
-						</Nav>
-						</Collapse>
-					</Navbar>}
-
-				{(isTabletOrMobileDevice && !isTabletOrMobile) && 
-					<Navbar className="header-style" dark>
-						<NavbarBrand href="/" className="mr-auto">
-							<img src={require("./assets/logo.png")} style={{width: 100}} alt="Navigation bar brand logo"/>
-						</NavbarBrand>
-						<NavbarToggler onClick={toggleNavbar} className="mr-2" />
-						<Collapse isOpen={!collapsed} navbar>
-						<Nav navbar style={{ alignItems: 'center' }}>
-							<NavItem>
-								<NavLink className='nav-link'  href='/'>Home</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink className='nav-link' href="/about">About</NavLink>
-							</NavItem>
-							<UncontrolledDropdown inNavbar>
-								<DropdownToggle className='nav-link' nav caret>
-									Episodes
-								</DropdownToggle>
-								<DropdownMenu center="true">
-									<NavLink className='nav-link' href='/episodes/all'>
-										<DropdownItem>
-											All
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/anthony'>
-										<DropdownItem>
-											Anthony's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/livia'>
-										<DropdownItem>
-											Livia's Picks
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/guest'>
-										<DropdownItem>
-											Guest Appearances
-										</DropdownItem>
-									</NavLink>
-									<NavLink className='nav-link' href='/episodes/bonus'>
-										<DropdownItem>
-											Bonus
-										</DropdownItem>
-									</NavLink>
-								</DropdownMenu>
-							</UncontrolledDropdown>
-							<NavItem>
-								<NavLink className='nav-link' href='/contact'>Contact</NavLink>
-							</NavItem>
-						</Nav>
-						</Collapse>
-					</Navbar>
-				}
+				<TopNav />
 				
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
-				<Route exact path="/episodes/all" render={() => {
-					// console.log('testing')
-					// defaultAnalytics.logEvent('test', 'test'); 
-					return <Episodes />
-				}} />
-				<Route exact path="/episodes/anthony" render={() => <Episodes isAnthony />}/>
-				<Route exact path="/episodes/livia" render={() => <Episodes isLivia />} />
-				<Route exact path="/episodes/guest" render={() => <Episodes isGuest />} />
-				<Route exact path="/episodes/bonus" render={() => <Episodes isBonus />} />
-				<Route path={`/episodes/episode/:episodeSlug`} render={() => <EpisodePage />} />
+				<Route path="/videos" component={Videos} />
 				<Route path="/contact" component={Contact} />
 			</BrowserRouter>
 		</div>

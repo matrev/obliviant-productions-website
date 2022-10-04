@@ -57,68 +57,27 @@
     }
 }
 
-/* Episodes Page Styles */
+/* Video Page Styles */
 
 @media screen and (min-width: 601px) {
-    .episodes-header {
+    .videos-header {
         color: var(--text-red);
         font-size: xxx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
-    }
-
-    .episode-card-description {
-        color: var(--text-white);
-        font-family: acumin-pro-condensed, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        width: calc(300px + 15vw);
-        font-size: calc(2vw);
-    } 
-
-    .episode-card-title {
-        color: var(--text-red);
-        font-size: xxx-large;
-        font-family: neue-kabel, sans-serif;
-        font-weight: 800;
-        font-style: normal;
-        width: 100%;
     }
 }
   
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-    .episodes-header {
+    .videos-header {
         color: var(--text-red);
         font-size: xx-large;;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
     }
-    .episode-card-description {
-        color: var(--text-white);
-        font-family: acumin-pro-condensed, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        width: calc(300px + 15vw);
-        font-size: 5vw;
-    }
-
-    .episode-card-title {
-        color: var(--text-red);
-        font-size: xx-large;
-        font-family: neue-kabel, sans-serif;
-        font-weight: 800;
-        font-style: normal;
-        width: 100%;
-    }
-}
-
-.episode-paginate-button {
-    font-family: neue-kabel, sans-serif;
-    font-weight: 800;
-    font-style: normal;
 }
 
 /* Contact Page Styles */

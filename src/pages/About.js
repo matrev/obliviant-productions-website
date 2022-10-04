@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack } from '@fluentui/react';
 import { Container, Row, Col } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
-import './pages.css';
+import '../styles/pages.css';
 
 export default function About () {
 

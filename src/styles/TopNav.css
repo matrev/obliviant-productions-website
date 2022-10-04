@@ -1,0 +1,25 @@
+.header-style {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-bottom: 0%;
+}
+
+
+.nav-link {
+  color: white;
+  font-size: xx-large;
+}
+
+.nav-link:hover {
+  color: #e05a4e;
+}
+
+hr.nav-bottom-border {
+  border: 2px solid white;
+  border-radius: 2px;
+  width:75%;
+  margin:0 auto;
+}
