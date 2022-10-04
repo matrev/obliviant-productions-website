@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd30d293.chunk.css",
+    "main.js": "/static/js/main.85d39f9c.chunk.js",
+    "main.js.map": "/static/js/main.85d39f9c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8e50440a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8e50440a.js.map",
+    "static/css/2.2a86faee.chunk.css": "/static/css/2.2a86faee.chunk.css",
+    "static/js/2.3650ecd5.chunk.js": "/static/js/2.3650ecd5.chunk.js",
+    "static/js/2.3650ecd5.chunk.js.map": "/static/js/2.3650ecd5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6822217fd9affce8fa67d417c910764d.js": "/precache-manifest.6822217fd9affce8fa67d417c910764d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.dd30d293.chunk.css.map": "/static/css/main.dd30d293.chunk.css.map",
+    "static/js/2.3650ecd5.chunk.js.LICENSE.txt": "/static/js/2.3650ecd5.chunk.js.LICENSE.txt",
+    "static/media/anthony.jpg": "/static/media/anthony.a7228ba4.jpg",
+    "static/media/discordIcon.png": "/static/media/discordIcon.f4a70664.png",
+    "static/media/instaIcon.png": "/static/media/instaIcon.cc82494e.png",
+    "static/media/livia.jpg": "/static/media/livia.d434bb4d.jpg",
+    "static/media/logo.png": "/static/media/logo.6b988403.png",
+    "static/media/spotifyIcon.png": "/static/media/spotifyIcon.d0d7f784.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e50440a.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.3650ecd5.chunk.js",
+    "static/css/main.dd30d293.chunk.css",
+    "static/js/main.85d39f9c.chunk.js"
+  ]
+}
