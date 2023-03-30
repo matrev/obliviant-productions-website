@@ -39,7 +39,7 @@
 
 :root {
   --bg-dark: #000000;
-  --bg-light: #DAD0ED;
+  /* --bg-light: #DAD0ED; */
   --text-dark: #000000;
   --text-light: #ffffff;
 }
@@ -48,4 +48,13 @@
   /* position: absolute; */
   left: 50%;
   margin-left: -(128)px
+}
+
+.home-header {
+  color: var(--text-white);
+  font-size: xx-large;
+  font-family: neue-kabel, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
 }

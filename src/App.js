@@ -1,24 +1,22 @@
 import React from 'react';
-import { Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import About from './pages/About';
-import Videos from './pages/Videos';
-import Contact from './pages/Contact';
-import { TopNav } from './components/TopNav';
+import SocialLinks from './components/SocialLinks';
+
 // import firebase from 'firebase';
 
 function App() {
 	return (
 		<div className="App">
-			<BrowserRouter basename={"/"}>
-				<TopNav />
-				
-				<Route exact path="/" component={Home} />
-				<Route path="/about" component={About} />
-				<Route path="/videos" component={Videos} />
-				<Route path="/contact" component={Contact} />
-			</BrowserRouter>
+			<div className="home-header">
+			</div>
+			<br></br>
+			<br></br>
+			<div>
+				<p className="home-text">I'm in the middle of reworking this site. Please be patient with me. </p>
+				<p className="home-text">-Anthony :)</p>
+			</div>
+			<br></br>
+			<br></br>
 		</div>
   );
 }

@@ -1,0 +1,74 @@
+
+.social-links {
+    margin: auto
+}
+
+.social-links-header {
+    color: var(--text-white);
+    font-size: x-large;
+    font-family: neue-kabel, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+}
+
+.social-links-icons {
+    text-align: center;
+}
+
+/* Social Icons Styles */
+@media screen and (min-width: 601px) {
+    .home-text {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2vw;
+        text-align: center;
+    }
+    .home-spotify-icon {
+        width: 64px
+    }
+    .home-twitter-icon {
+        width: 64px
+    }
+    .home-instagram-icon {
+        width: 64px
+    }
+    .home-discord-icon {
+        width: 58px;
+        height: 64px
+    }
+    .home-youtube-icon {
+        width: 66px;
+        height: 54px
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .home-text {
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+    }
+    .home-spotify-icon {
+        width: 32px
+    }
+    .home-twitter-icon {
+        width: 32px
+    }
+    .home-instagram-icon {
+        width: 32px
+    }
+    .home-discord-icon {
+        width: 29px;
+        height: 32px
+    }
+    .home-youtube-icon {
+        width: 33px;
+        height: 27px
+    }
+}

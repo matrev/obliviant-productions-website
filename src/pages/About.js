@@ -11,7 +11,7 @@ export default function About () {
 	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' });
 
     return (
-        <div>
+        <div className="page">
             <Stack className='about-header' horizontalAlign='center'>
                 About
             </Stack>
