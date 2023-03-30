@@ -12,9 +12,9 @@ export default function About () {
 
     return (
         <div className="page">
-            <Stack className='about-header' horizontalAlign='center'>
+            <div className='about-header'>
                 About
-            </Stack>
+            </div>
             
             {(isTabletOrMobile || isTabletOrMobileDevice) && 
                 <Stack className='home-text' horizontalAlign='center' >

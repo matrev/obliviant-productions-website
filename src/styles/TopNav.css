@@ -1,3 +1,10 @@
+:root {
+  --text-blue: #1db3cb;
+  --text-red: #e05a4e;
+  --text-yellow: #ffb541;
+  --text-white: #ffffff;
+}
+
 .header-style {
     background-color: var(--bg-dark);
     /* color: var(--text-light); */
@@ -11,13 +18,30 @@
   border-color: white;
 }
 
-.nav-link {
+.nav-link-about, .nav-link-videos, .nav-link-newsletter, .nav-link-contact {
   color: white;
   font-size: xx-large;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
 }
 
-.nav-link:hover {
-  color: #e05a4e;
+.nav-link-about:hover {
+  color: var(--text-blue);
+}
+
+.nav-link-videos:hover {
+  color: var(--text-red);
+}
+
+.nav-link-newsletter:hover {
+  color: var(--text-yellow);
+}
+
+.nav-link-contact:hover {
+  color: var(--text-blue);
 }
 
 hr.nav-bottom-border {

@@ -5,8 +5,9 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About';
-import Videos from './pages/Videos';
 import Contact from './pages/Contact';
+import Newsletter from './pages/Newsletter';
+import Videos from './pages/Videos';
 import TopNav from './components/TopNav';
 import App from './App';
 
@@ -30,8 +31,16 @@ const router = createBrowserRouter([
         element: <Videos />
       },
       {
+        path: "/newsletter",
+        element: <Newsletter />
+      },
+      {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "*",
+        element: <App />
       }
     ]
   }
