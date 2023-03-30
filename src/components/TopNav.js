@@ -11,7 +11,6 @@ export default function TopNav (){
 	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' });
 
     const [collapsed, setCollapsed] = useState(false);
-    const [linkStyle, setLinkStyle] = React.useState(navLinkDefault);
     const [isAboutClicked, setIsAboutClicked] = useState(false);
     const [isVideoClicked, setIsVideoClicked] = useState(false);
     const [isNewsletterClicked, setIsNewsletterClicked] = useState(false);
