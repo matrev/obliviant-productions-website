@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import SocialLinks from './components/SocialLinks';
 
 // import firebase from 'firebase';
 
