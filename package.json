@@ -1,8 +1,8 @@
 {
-  "name": "brothersistershow",
+  "name": "obliviantproductions",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://brothersistershow.com/",
+  "homepage": "https://obliviantproductions.com/",
   "devDependencies": {
     "@svgr/webpack": "^6.2.1"
   },
