@@ -47,7 +47,7 @@ export default function TopNav (){
         <>
             <Navbar className='header-style'>
                 <NavbarBrand href="/" className="mr-auto">
-                    <img src={require("../assets/logo.PNG")} style={{width: 100, }} alt="Navigation bar brand logo"/>
+                    <img src={require("../assets/logo.PNG")} style={{width: 100}} alt="Navigation bar brand logo"/>
                 </NavbarBrand>
                 {isTabletOrMobile && <NavbarToggler className="hamburger" onClick={toggleNavbar} /> }
                 <Collapse isOpen={isTabletOrMobile ? collapsed : true} navbar={isTabletOrMobile}>
