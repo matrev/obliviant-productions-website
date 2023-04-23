@@ -9,7 +9,7 @@ export default function Contact () {
                 Contact
             </div>
             <SocialLinks />
-            <a href="mailto:thebrosispod@gmail.com">thebrosispod@gmail.com</a>
+            <a href="mailto:obliviantproductions@gmail.com">obliviantproductions@gmail.com</a>
         </div>
     )
 }
