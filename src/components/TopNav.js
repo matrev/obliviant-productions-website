@@ -10,7 +10,7 @@ import { navLinkDefault, navLinkDefaultTabletOrMobile } from '../utilities/const
 export default function TopNav (){
 	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 850px)' });
 
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
     const [isAboutClicked, setIsAboutClicked] = useState(false);
     const [isVideoClicked, setIsVideoClicked] = useState(false);
     const [isNewsletterClicked, setIsNewsletterClicked] = useState(false);
@@ -26,15 +26,19 @@ export default function TopNav (){
         switch (pageLocation.pathname) {
             case "/about":
                 setIsAboutClicked(true);
+                if(isTabletOrMobile) setCollapsed(true);
                 break;
             case "/videos":
                 setIsVideoClicked(true);
+                if(isTabletOrMobile) setCollapsed(true);
                 break;
             case "/newsletter":
                 setIsNewsletterClicked(true);
+                if(isTabletOrMobile) setCollapsed(true);
                 break;
             case "/contact":
                 setIsContactClicked(true);
+                if(isTabletOrMobile) setCollapsed(true);
                 break;
             default:
                 break;
@@ -53,8 +57,8 @@ export default function TopNav (){
                 <NavbarBrand href="/" className="mr-auto">
                     <img src={require("../assets/obliviantproductions_logo.png")} style={{ width: isTabletOrMobile ? 100 : 200 }} alt="Navigation bar brand logo"/>
                 </NavbarBrand>
-                {isTabletOrMobile && <NavbarToggler className="hamburger" onClick={toggleNavbar} /> }
-                <Collapse isOpen={isTabletOrMobile ? collapsed : true} navbar={isTabletOrMobile}>
+                {isTabletOrMobile && <NavbarToggler onClick={toggleNavbar} /> }
+                <Collapse isOpen={isTabletOrMobile ? !collapsed : true} navbar={isTabletOrMobile}>
                     <Nav className="ml-auto" navbar={isTabletOrMobile}>
                         <Link style={!isAboutClicked ? navLinkStyles : {...navLinkStyles, color: "var(--text-blue)"}} to="/about">About</Link>
                         <Link style={!isVideoClicked ? navLinkStyles : {...navLinkStyles, color: "var(--text-red)"}} to="/videos">Videos</Link>
