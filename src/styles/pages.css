@@ -7,7 +7,7 @@
 .page {
     background-color: #000000;
 }
-/* About Page Styles */
+/* Page styles not mobile or tablet */
 @media screen and (min-width: 601px) {
     .about-header {
         color: var(--text-blue);
@@ -16,21 +16,7 @@
         font-weight: 800;
         font-style: normal;
     }
-}
-  
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-    .about-header {
-        color: var(--text-blue);
-        font-size: xx-large;
-        font-family: neue-kabel, sans-serif;
-        font-weight: 800;
-        font-style: normal;
-    }
-}
 
-/* Video Page Styles */
-@media screen and (min-width: 601px) {
     .videos-header {
         color: var(--text-red);
         font-size: xxx-large;
@@ -38,52 +24,76 @@
         font-weight: 800;
         font-style: normal;
     }
-}
-  
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-    .videos-header {
-        color: var(--text-red);
-        font-size: xx-large;;
+
+    .newsletter-header {
+        color: var(--text-yellow);
+        font-size: xxx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
     }
-}
 
-/* Contact Page Styles */
-@media screen and (min-width: 601px) {
-    .contact-text { 
+    .contact-header {
+        color: var(--text-blue);
+        font-size: xxx-large;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .page-text { 
         color: var(--text-white);
         font-family: acumin-pro-condensed, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 2vw;
     }
-    .contact-header {
-        color: var(--text-yellow);
-        font-size: xxx-large;
+}
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .about-header {
+        color: var(--text-blue);
+        font-size: xx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
+        margin-left: 5%;
     }
-}
-  
-/* If the screen size is 600px wide or less */
-@media screen and (max-width: 600px) {
-    .contact-text { 
-        color: var(--text-white);
-        font-family: acumin-pro-condensed, sans-serif;
-        font-weight: 400;
+
+    .videos-header {
+        color: var(--text-red);
+        font-size: xx-large;;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
         font-style: normal;
-        font-size: 5vw;
+        margin-left: 5%;
     }
+
     .contact-header {
+        color: var(--text-blue);
+        font-size: xx-large;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        margin-left: 5%;
+    }
+
+    .newsletter-header {
         color: var(--text-yellow);
         font-size: xx-large;
         font-family: neue-kabel, sans-serif;
         font-weight: 800;
         font-style: normal;
+        margin-left: 5%;
+    }    
+
+    .page-text { 
+        color: var(--text-white);
+        font-family: acumin-pro-condensed, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+        margin-left: 5%;
     }
 }
-
