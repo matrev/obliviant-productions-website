@@ -13,3 +13,9 @@
         >REACT_APP_EMAILJS_USER_API_KEY={USER_ID}
 3. Run the command `npm run start` to create development build
 
+## Deployment (GitHub Pages)
+
+- To deploy, run `npm run deploy`.
+- This will build the app and publish it to GitHub Pages using the `gh-pages` branch.
+- See `DEPLOYMENT.md` for more details.
+
